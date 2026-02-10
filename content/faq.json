@@ -1,0 +1,86 @@
+{
+  "heading": "Frequently Asked Questions",
+  "description": "Everything you need to know about getting tattooed at Diablo Tattoo. If you have any other questions, feel free to contact us.",
+  "items": [
+    {
+      "id": 1,
+      "question": "How do I book in?",
+      "answer": "To book a consultation with Nathan, please submit a form by clicking here. You will be able to send an email to the studio and attach reference photos of work you have seen that you would like done. Nathan will then respond to you to find some time to come into the studio, size up what you are looking to get and then book in with your chosen artist."
+    },
+    {
+      "id": 2,
+      "question": "What are your opening hours?",
+      "answer": "We are open Tuesday to Saturday 10am – 5pm. Consultations run 11am – 4pm. We aim to respond to all enquires within 24 hours."
+    },
+    {
+      "id": 3,
+      "question": "What are your rates?",
+      "answer": "We have a minimum charge set of £50. Hourly rate is £80. Daysits are set at a discounted rate of £450 and run from 10am – 5pm."
+    },
+    {
+      "id": 4,
+      "question": "Do I need to pay a deposit to book in?",
+      "answer": "Yes, you will need to pay a deposit to book in with your artist. We are a cash only studio so we require you to come into the studio with the correct amount in cash to book in. Your tattoo cannot be booked without a deposit. This deposit fee comes off of the total amount of your session. Deposits are non-refundable."
+    },
+    {
+      "id": 5,
+      "question": "What if I need to cancel my session?",
+      "answer": "If you need to cancel your session unfortunately the deposit on that session will be lost and you will be required to come back into the studio and pay another deposit. Deposits help go towards the running of the studio and ensuring an artist has income. If we are able to cover the session ahead of time, your deposit may be able to be transferred, but this is not always possible."
+    },
+    {
+      "id": 6,
+      "question": "Can I reschedule?",
+      "answer": "You are able to reschedule an appointment with enough notice. We require MORE than 72 hours to rearrange the appointment. Deposit will be lost if a request to reschedule is made after this window."
+    },
+    {
+      "id": 7,
+      "question": "Will I receive a copy of the tattoo I am getting?",
+      "answer": "This all depends on your artists preferences. Some of our artists carry drawing equipment on them and will more than likely show you the design on the day and then if there are any changes that need to be made we can make them there and then. This does NOT apply to all of our artists, however."
+    },
+    {
+      "id": 8,
+      "question": "Can I change elements of the design?",
+      "answer": "Yes you can, but the artists will need to be prepared ahead of time. You can let us know of any changes prior to the appointment so we can implement them ahead of the time. Please let us know with enough time within our opening times ahead of schedule and we will endeavour to make the necessary changes before your appointment. Any major last minute changes such as a complete redraw may require you to rebook and, time dependent before the booked session, may be subject to the deposit being lost."
+    },
+    {
+      "id": 9,
+      "question": "Do you do cover ups?",
+      "answer": "Yes we do. We have covered many existing tattoos, big or small. Sometimes it may not be totally possible for us to cover what you may have due to the depth of the ink already in the skin, and it may be suggested to have courses of laser treatment to lighten the existing tattoo in order to fully cover what is already there. Send us through a picture of what needs to be covered and your ideas of what you want to cover it with."
+    },
+    {
+      "id": 10,
+      "question": "Can and will you tattoo over scars?",
+      "answer": "We can, yes, so long as the scars are not red and raised. If they are years old and do not feel like they are keloid scars then our artists can work on them."
+    },
+    {
+      "id": 11,
+      "question": "I have a skin condition. Can I still get tattooed?",
+      "answer": "Tattooing if you have a skin condition is doable, but unfortunately we will not be able to tattoo over a flare up of the skin condition, such as eczema for example. Please let us know prior to the appointment if you suffer with a skin condition and we will discuss the best course of action for you."
+    },
+    {
+      "id": 12,
+      "question": "I'm worried about the pain. Can I use numbing cream?",
+      "answer": "Our artists highly recommend that you do NOT use numbing cream. The reason being is that it creates a barrier on the skin, rubberizing that area and making it harder for an artist to get the needle into the skin. Artists reserve the right to refuse service if they are not comfortable working on skin that has been covered in numbing cream."
+    },
+    {
+      "id": 13,
+      "question": "Is someone able to sit in on the session with me?",
+      "answer": "Of course. Due to the size of the studio and the way our artists have their benches set up, it may not always be possible, but we will endeavour to accommodate friends/family where possible. Only one person may sit up with you at any point."
+    },
+    {
+      "id": 14,
+      "question": "Can I eat in the studio?",
+      "answer": "Of course you can! We encourage our clients to eat throughout the day, but if you are in for a long session and you need some lunch, we ask respectfully if you can eat at the front of the studio in the reception area, and not in workstations."
+    },
+    {
+      "id": 15,
+      "question": "Is Diablo Tattoo accessible?",
+      "answer": "We are, yes. We are able to accommodate wheelchair users into our artists' booths. We have no ramp into the studio so you can get in with ease. We only have one toilet in the studio but unfortunately you will not be able to fit a wheelchair in there."
+    },
+    {
+      "id": 16,
+      "question": "I'm under 18. Can I still get tattooed with parent/guardian permission?",
+      "answer": "No. It is against the law to tattoo anyone under the age of 18. We will NOT budge on this. If you are under the age of 21 you will be required to present a photo ID as you sign your consent form prior to the session starting. If you do not bring in photo ID on the day of your tattoo we will not be able to tattoo you."
+    }
+  ]
+}

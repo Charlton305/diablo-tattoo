@@ -1,0 +1,29 @@
+{
+  "siteName": "DIABLO TATTOO",
+  "tagline": "Custom Art and Bespoke Design Tattoo Studio",
+  "location": "Rochester, Kent",
+  "address": "116 High Street, Rochester, Kent, ME1 1JT",
+  "email": "rayhunttattoo@gmail.com",
+  "phone": "01634 846633",
+  "socialLinks": {
+    "instagram": "https://www.instagram.com/diablo.tattoo.rochester/",
+    "facebook": "https://www.facebook.com/RayHuntTattoos"
+  },
+  "navigation": [
+    { "name": "Home", "href": "/" },
+    { "name": "Artists", "href": "/artists" },
+    { "name": "Guide", "href": "/guide" },
+    { "name": "Gallery", "href": "/gallery" },
+    { "name": "FAQ", "href": "/faq" },
+    { "name": "Contact", "href": "/contact" }
+  ],
+  "openingHours": [
+    { "day": "Monday", "hours": "Closed" },
+    { "day": "Tuesday", "hours": "10:00 AM - 5:00 PM" },
+    { "day": "Wednesday", "hours": "10:00 AM - 5:00 PM" },
+    { "day": "Thursday", "hours": "10:00 AM - 5:00 PM" },
+    { "day": "Friday", "hours": "10:00 AM - 5:00 PM" },
+    { "day": "Saturday", "hours": "10:00 AM - 5:00 PM" },
+    { "day": "Sunday", "hours": "Closed" }
+  ]
+}

@@ -1,0 +1,261 @@
+{
+  "heading": "Our Artists",
+  "description": "Meet the talented team at Diablo Tattoo. Each artist brings their own unique style and expertise to create custom artwork tailored to your vision.",
+  "artists": [
+    {
+      "name": "Ray",
+      "slug": "ray",
+      "image": "/ray-profile-pic.jpg",
+      "imageAlt": "Ray, founder and tattoo artist at Diablo Tattoo",
+      "bio": "Ray has been tattooing since the mid-90s, bringing decades of experience and a dedicated artistic vision to every piece. He opened Diablo Tattoo in 2009 and has worked conventions across the UK and overseas, having won several awards at major conventions and magazine features along the way.\n\nComfortable working in most styles, Ray specialises in free hand work, cover-ups, large-scale black and grey, and bold oriental work. Beyond tattooing, he also creates commissioned artwork in a range of mediums. When he's not in the studio, Ray plays drums in a touring band and enjoys time relaxing in the great outdoors.",
+      "galleryImages": [
+        {
+          "src": "/images/artists/ray/ray-underwater-marine-life-sleeve.jpg",
+          "alt": "Realistic colour underwater full sleeve with betta fish, dolphin, pufferfish and tropical marine life by Ray"
+        },
+        {
+          "src": "/images/artists/ray/ray-classic-horror-monsters-sleeve.jpg",
+          "alt": "Black and grey classic horror monsters full sleeve featuring Bride of Frankenstein, Nosferatu and Creature from the Black Lagoon by Ray"
+        },
+        {
+          "src": "/images/artists/ray/ray-coverup-wolf-over-celtic-knot.jpg",
+          "alt": "Snarling wolf cover-up over faded Celtic knot showing before, stencil and finished piece by Ray"
+        },
+        {
+          "src": "/images/artists/ray/ray-fire-ice-dragons-backpiece.jpg",
+          "alt": "Fire dragon vs ice dragon full back piece in colour realism by Ray"
+        },
+        {
+          "src": "/images/artists/ray/ray-ornamental-filigree-hand.jpg",
+          "alt": "Black and grey ornamental filigree hand tattoo by Ray"
+        },
+        {
+          "src": "/images/artists/ray/ray-coverup-xenomorph-alien.jpg",
+          "alt": "Xenomorph Alien in blue tones cover-up over script text on torso by Ray"
+        },
+        {
+          "src": "/images/artists/ray/ray-jungle-wildlife-leg-sleeve.jpg",
+          "alt": "Realistic colour jungle wildlife full leg sleeve with chimp, jaguar, parrot, toucan, giraffe and chameleon by Ray"
+        },
+        {
+          "src": "/images/artists/ray/ray-guanyin-dragon-backpiece.jpg",
+          "alt": "Black and grey Guanyin and dragon full back piece in oriental style by Ray"
+        },
+        {
+          "src": "/images/artists/ray/ray-coverup-cthulhu-skull-colour.jpg",
+          "alt": "Colour Cthulhu skull cover-up over faded eagle showing before, stencil and finished piece by Ray"
+        },
+        {
+          "src": "/images/artists/ray/ray-budgies-branch-realistic.jpg",
+          "alt": "Realistic pair of budgerigars on a branch with green leaves by Ray"
+        },
+        {
+          "src": "/images/artists/ray/ray-japanese-sleeve-hannya-cherry-blossom.jpg",
+          "alt": "Japanese style full sleeve with hannya masks, cherry blossom and snake in black and grey with red accents by Ray"
+        },
+        {
+          "src": "/images/artists/ray/ray-coverup-evil-unicorn.jpg",
+          "alt": "Dark evil unicorn with red mane and glowing eyes cover-up over faded dragon by Ray"
+        },
+        {
+          "src": "/images/artists/ray/ray-bear-tiger-lion-backpiece.jpg",
+          "alt": "Neo-traditional bear, tiger and lion battle full back piece with chrysanthemum in colour by Ray"
+        },
+        {
+          "src": "/images/artists/ray/ray-realistic-old-man-portrait.jpg",
+          "alt": "Black and grey realistic portrait of an elderly man on upper arm by Ray"
+        },
+        {
+          "src": "/images/artists/ray/ray-coverup-pirate-skull-portrait.jpg",
+          "alt": "Pirate skull with wings and female portrait cover-up over England bulldog by Ray"
+        },
+        {
+          "src": "/images/artists/ray/ray-cartoon-pop-culture-sleeve.jpg",
+          "alt": "Colour cartoon full sleeve featuring Tom and Jerry, Teenage Mutant Ninja Turtles, Earthworm Jim and ThunderCats by Ray"
+        },
+        {
+          "src": "/images/artists/ray/ray-great-war-newspaper-torso.jpg",
+          "alt": "Black and grey WW1 Armistice newspaper front page torso piece with skull and roses by Ray"
+        },
+        {
+          "src": "/images/artists/ray/ray-coverup-devil-child-portrait.jpg",
+          "alt": "Realistic red devil child portrait cover-up over Day of the Dead girl by Ray"
+        },
+        {
+          "src": "/images/artists/ray/ray-dog-portrait-ornate-frame.jpg",
+          "alt": "Realistic dog portrait in suit and glasses in ornate gold frame on thigh by Ray"
+        },
+        {
+          "src": "/images/artists/ray/ray-horror-sleeve-pinhead-jason.jpg",
+          "alt": "Black and grey horror full sleeve featuring Pinhead, Jason Voorhees and Pennywise by Ray"
+        },
+        {
+          "src": "/images/artists/ray/ray-coverup-poseidon-nautical-sleeve.jpg",
+          "alt": "Poseidon and galleon ship nautical full sleeve cover-up over tribal piece by Ray"
+        },
+        {
+          "src": "/images/artists/ray/ray-pokemon-pikachu-squirtle.jpg",
+          "alt": "Colour Pikachu and Squirtle calf piece with pixel art background by Ray"
+        },
+        {
+          "src": "/images/artists/ray/ray-demon-dogs-chest-torso.jpg",
+          "alt": "Black and grey demon face with pit bulls and Roman numeral dates full torso piece by Ray"
+        },
+        {
+          "src": "/images/artists/ray/ray-coverup-horror-face-truck.jpg",
+          "alt": "Dark horror face with truck cover-up over skull and flags back piece by Ray"
+        },
+        {
+          "src": "/images/artists/ray/ray-samurai-dog-japanese-sleeve.jpg",
+          "alt": "Japanese-inspired colour full sleeve with samurai dog, snake, frog and Eye of Horus by Ray"
+        },
+        {
+          "src": "/images/artists/ray/ray-skull-face-morph.jpg",
+          "alt": "Black and grey skull and female face morph tattoo by Ray"
+        },
+        {
+          "src": "/images/artists/ray/ray-coverup-owl-roses.jpg",
+          "alt": "Realistic black and grey owl with roses cover-up over line work owl by Ray"
+        },
+        {
+          "src": "/images/artists/ray/ray-floral-botanical-sleeve.jpg",
+          "alt": "Colour botanical full sleeve with hibiscus, lotus, daffodils and tree frog by Ray"
+        },
+        {
+          "src": "/images/artists/ray/ray-religious-renaissance-backpiece.jpg",
+          "alt": "Black and grey Renaissance-style religious scene full back piece with angels and crucifixion by Ray"
+        },
+        {
+          "src": "/images/artists/ray/ray-coverup-horror-pentagram-face.jpg",
+          "alt": "Horror face with pentagram and blood cover-up over Day of the Dead design by Ray"
+        }
+      ]
+    },
+    {
+      "name": "Leo",
+      "slug": "leo",
+      "image": "/leo-profile-pic.jpg",
+      "imageAlt": "Leonnie Brunt, tattoo artist at Diablo Tattoo",
+      "bio": "Leonnie Brunt is a tattoo artist with over 15 years worth of experience whose creative roots run deep in Medway, Kent, where she was born and raised. She refined her artistic foundations during five years of study at the Kent Institute of Art and Design, an experience that shaped both her technical skill and her distinctive creative voice.\n\nA lifelong painter, Leonnie draws inspiration from the outdoors, developing a particular passion for outdoor and watercolour landscape painting. This love of fluid colour and natural forms translates seamlessly into her tattoo work, where she is known for her expressive and vibrant watercolour tattoos. Beyond her tattoo practice, Leonnie is also a surrealist painter working primarily in acrylic on canvas, exploring the subconscious and dreamlike imagery that fuels her imagination.\n\nLeonnie specialises in full-colour pieces, watercolour tattoos, cartoons, neo-traditional styles, and uniquely quirky designs. Her artistic versatility, paired with her thoughtful storytelling approach, makes her a sought-after artist for clients looking for both creativity and craftsmanship.\n\nWhen she's not in the studio, Leonnie enjoys staying active—often found at the gym or out bike riding, activities that keep her energised and continually inspired.",
+      "galleryImages": [
+        {
+          "src": "/images/artists/leo/leo-watercolour-squirtle.jpg",
+          "alt": "Watercolour Squirtle tattoo with paint splatter effect by Leo"
+        },
+        {
+          "src": "/images/artists/leo/leo-chibi-cloud-strife.jpg",
+          "alt": "Chibi Cloud Strife from Final Fantasy VII tattoo by Leo"
+        },
+        {
+          "src": "/images/artists/leo/leo-orangutan-tropical-sleeve.jpg",
+          "alt": "Realistic baby orangutan half sleeve with tropical flowers and foliage by Leo"
+        },
+        {
+          "src": "/images/artists/leo/leo-rose-heart-coverup.jpg",
+          "alt": "Neo-traditional rose in heart-shaped vine frame cover-up tattoo by Leo"
+        },
+        {
+          "src": "/images/artists/leo/leo-wolf-forest-coverup.jpg",
+          "alt": "Wolf and moonlit forest scene with autumn leaves cover-up tattoo by Leo"
+        },
+        {
+          "src": "/images/artists/leo/leo-watercolour-sea-scene.jpg",
+          "alt": "Watercolour sea scene with lighthouse, turtle and jellyfish by Leo"
+        },
+        {
+          "src": "/images/artists/leo/leo-thumper-flowers-hearts.jpg",
+          "alt": "Thumper from Bambi with flowers and hearts back piece by Leo"
+        },
+        {
+          "src": "/images/artists/leo/leo-cat-silhouette-portrait.jpg",
+          "alt": "Realistic cat portrait inside cat silhouette with Morgan script by Leo"
+        },
+        {
+          "src": "/images/artists/leo/leo-jelly-jameson-neotraditional.jpg",
+          "alt": "Neo-traditional jelly mould and Jameson whiskey bottle tattoo by Leo"
+        },
+        {
+          "src": "/images/artists/leo/leo-watercolour-phoenix.jpg",
+          "alt": "Watercolour phoenix tattoo with vibrant colour splashes by Leo"
+        },
+        {
+          "src": "/images/artists/leo/leo-dog-riding-dolphin.jpg",
+          "alt": "Jack Russell riding a dolphin with Mischiefs script tattoo by Leo"
+        },
+        {
+          "src": "/images/artists/leo/leo-vegvisir-norse-compass.jpg",
+          "alt": "Vegvisir Norse compass with cracked stone texture chest piece by Leo"
+        },
+        {
+          "src": "/images/artists/leo/leo-iron-maiden-eddie-trooper.jpg",
+          "alt": "Iron Maiden Eddie from The Trooper in full colour leg piece by Leo"
+        }
+      ]
+    },
+    {
+      "name": "Jin",
+      "slug": "jin",
+      "image": "/jin-profile-pic.JPG",
+      "imageAlt": "Jin, tattoo artist at Diablo Tattoo",
+      "bio": "Jin is a highly experienced tattoo artist with 25 years in the industry, known for his precision, creativity, and dedication to the craft. Having co-owned a successful tattoo studio in Essex, he has built a strong reputation for delivering exceptional work across a wide range of styles. While he is versatile in all forms of tattooing, Jin is particularly passionate about horror realism, where his mastery of detail and atmosphere truly stands out.\n\nBeyond tattooing, Jin is a multi-disciplinary artist who enjoys sculpting, painting, and drawing, constantly expanding his creative skillset. His artistic expertise has also led him to work on numerous special-effects projects, further showcasing his ability to bring imaginative concepts to life.\n\nA lover of dark aesthetics and cult classics, Jin's favourite film is House of 1000 Corpses. When he's not creating art, he can often be found enjoying his favourite meal—Wagyu steak.",
+      "galleryImages": [
+        {
+          "url": "https://images.pexels.com/photos/1553267/pexels-photo-1553267.jpeg?auto=compress&cs=tinysrgb&w=800",
+          "alt": "Horror realism tattoo by Jin"
+        },
+        {
+          "url": "https://images.pexels.com/photos/4123897/pexels-photo-4123897.jpeg?auto=compress&cs=tinysrgb&w=800",
+          "alt": "Detailed custom work by Jin"
+        },
+        {
+          "url": "https://images.pexels.com/photos/1557652/pexels-photo-1557652.jpeg?auto=compress&cs=tinysrgb&w=800",
+          "alt": "Creative design by Jin"
+        },
+        {
+          "url": "https://images.pexels.com/photos/2179237/pexels-photo-2179237.jpeg?auto=compress&cs=tinysrgb&w=800",
+          "alt": "Precision tattoo work by Jin"
+        },
+        {
+          "url": "https://images.pexels.com/photos/949131/pexels-photo-949131.jpeg?auto=compress&cs=tinysrgb&w=800",
+          "alt": "Atmospheric tattoo design by Jin"
+        }
+      ]
+    },
+    {
+      "name": "Matt",
+      "slug": "matt",
+      "image": "/matt-profile-pic.jpg",
+      "imageAlt": "Matt, tattoo artist at Diablo Tattoo",
+      "bio": "Matt is a tattoo artist with over 15 years of experience, bringing creativity and meaning to every piece he creates. Before tattooing, Matt spent 22 years as a graphic designer, building a strong foundation in design and detail.\n\nDuring the Covid years, Matt explored painting commissions, focusing on portraits and animal artwork that captured the unique personality of each subject.\n\nOutside of art, Matt has been playing drums since 1980. His band tours across Europe and the U.S.\n\nArt and music have always been at the heart of what he does, and he loves sharing that passion with others.",
+      "galleryImages": [
+        {
+          "url": "https://images.pexels.com/photos/4118474/pexels-photo-4118474.jpeg?auto=compress&cs=tinysrgb&w=800",
+          "alt": "Custom tattoo design by Matt"
+        },
+        {
+          "url": "https://images.pexels.com/photos/1809354/pexels-photo-1809354.jpeg?auto=compress&cs=tinysrgb&w=800",
+          "alt": "Portrait tattoo work by Matt"
+        },
+        {
+          "url": "https://images.pexels.com/photos/7003188/pexels-photo-7003188.jpeg?auto=compress&cs=tinysrgb&w=800",
+          "alt": "Detailed tattoo by Matt"
+        },
+        {
+          "url": "https://images.pexels.com/photos/1619792/pexels-photo-1619792.jpeg?auto=compress&cs=tinysrgb&w=800",
+          "alt": "Creative design by Matt"
+        },
+        {
+          "url": "https://images.pexels.com/photos/1322185/pexels-photo-1322185.jpeg?auto=compress&cs=tinysrgb&w=800",
+          "alt": "Animal portrait tattoo by Matt"
+        }
+      ]
+    },
+    {
+      "name": "Nathan",
+      "slug": "nathan",
+      "image": "/nathan-profile-pic.png",
+      "imageAlt": "Nathan, Studio Manager at Diablo Tattoo",
+      "bio": "Nathan is the Studio Manager and primary point of contact at the tattoo studio, overseeing bookings for all resident artists and ensuring each client's experience runs smoothly from first enquiry to final appointment. With a strong understanding of the artists' styles and specialties, Nathan carefully matches clients with the right artist for their vision.\n\nHe also leads one-on-one consultations, helping clients refine their ideas, choose the right design and size, and feel confident in every step of the process before tattoo day. His approachable manner and attention to detail make him an essential part of creating a welcoming, professional studio environment.\n\nOutside the studio, Nathan spends his downtime playing bass in his bands, playing video games, exploring photography, and socialising—bringing the same creativity and connection into his work at the studio."
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "heading": "Tattoo Guide",
+  "description": "Everything you need to know before, during, and after your tattoo session at Diablo Tattoo.",
+  "beforeSession": {
+    "heading": "Before Your Tattoo Session",
+    "intro": "Preparing for a tattoo can feel like a daunting task, especially if this is your first tattoo. We've compiled some information to help you ahead of your appointment:",
+    "items": [
+      {
+        "id": 1,
+        "title": "Allergies and Medications",
+        "content": "The gloves our artists use are latex. If you have a latex allergy, please let us know with enough time so we can use nitrile gloves. If you are on any medications that you think we may need to know about prior to the appointment, please let us know with enough time so we can advise on the best course of action."
+      },
+      {
+        "id": 2,
+        "title": "Payment",
+        "content": "Here at Diablo Tattoo we only take cash payments. Please ensure you have the correct amount with you to pay for your session before arriving at the studio. If in the event you need to draw the money out after your session, it is studio policy for you to leave an item with us so we know that you are coming back to pay for your session."
+      },
+      {
+        "id": 3,
+        "title": "Timing",
+        "content": "Sometimes, tattoo appointments may possibly run over the time quoted. Our artists will NOT rush tattoos and will complete them in the time needed. Please ensure you leave ample time either side of your tattoo in the possibility that the appointment runs over. If you are working straight after your session, or you are required to pick kids up, you will need to plan this well in advance in the possibility that the tattoo ends up taking slightly longer."
+      },
+      {
+        "id": 4,
+        "title": "Age Restrictions",
+        "content": "Due to the nature of the studio, no one under the age of 18 may enter the studio. Children are NOT allowed in the studio under any circumstances."
+      },
+      {
+        "id": 5,
+        "title": "Food and Nutrition",
+        "content": "Please ensure you eat before your session. Long or short session, it does not matter. You must make sure you eat a substantial amount of food before your tattoo, as well as keeping your sugar levels up throughout the course of the session. We suggest a filling large breakfast/lunch before your appointment in order to complete the session. If you do not eat before your session, we will ask you to get something to eat prior, as the last thing we want for you is to feel unwell during your appointment with us."
+      },
+      {
+        "id": 6,
+        "title": "Holidays and Sun Exposure",
+        "content": "Please do not get a tattoo if you are planning on going on holiday to a hot destination shortly afterwards. We recommend you get the tattoo after your holiday. Exposing your fresh tattoo to UV rays from the sun, sand, and sea/pool water has the potential to cause infection."
+      },
+      {
+        "id": 7,
+        "title": "Clothing",
+        "content": "You must wear appropriate clothes to your tattoo appointment. If you are having your foot tattooed, wear some shoes that won't rub or press on your new tattoo. If you are having a tattoo on your leg or back, please wear clothes that are comfy and will not rub or constrict the area. There may be a possibility that we need to cut items of clothing to get to these areas, and there is the risk of getting tattoo ink on them. We ask you to please not wear your best clothes for fear of spillage."
+      },
+      {
+        "id": 8,
+        "title": "For Ladies",
+        "content": "Ladies, if you are on or near your monthly cycle, please be aware that your skin and your tattoo may be a bit more sensitive than normal."
+      },
+      {
+        "id": 9,
+        "title": "Health and Wellness",
+        "content": "The day/night before your tattoo you should eat well, and eat healthily. Please try and get a good night's rest before the session. We ask ALL of our clients to NOT take drugs or drink any alcohol 24 hours before your session as it will affect the whole tattoo experience."
+      }
+    ]
+  },
+  "aftercare": {
+    "heading": "Tattoo Aftercare",
+    "intro": "Once your tattoo with us is completed your artist will apply a cling film wrap to your tattoo. Please keep this on for at least 2/3 hours unless otherwise stated by your artist. Wash under a tap or a shower whilst the tattoo is healing. Do NOT submerge the tattoo in a bath, as doing so will cause an infection.",
+    "instructions": [
+      {
+        "id": 1,
+        "content": "After that time remove the cling film and wash your tattoo with clean hands in warm water using a NON-perfumed soap, such as Simple, Johnson's Baby Soap, Dove Beauty Bars etc."
+      },
+      {
+        "id": 2,
+        "content": "Gently pat the area dry and apply a thin layer of Bepanthen or unscented Palmers Cocoa Butter."
+      },
+      {
+        "id": 3,
+        "content": "Repeat these steps between 3 to 4 times a day."
+      },
+      {
+        "id": 4,
+        "content": "After about a week your tattoo should be healed enough to switch to an everyday moisturiser. Again, this should be NON-perfumed and gentle, such as Vaseline Intensive Care, Cocoa/Shea Butter, Dove, as these are all very good at helping to keep the fresh tattoo moisturised after that initial first week."
+      },
+      {
+        "id": 5,
+        "content": "You will find that your tattoo may peel or itch over the course of full healing, which is typically a month. This is perfectly normal and is a sign that the tattoo is healing as it should. PLEASE DO NOT SCRATCH OR PICK YOUR NEW TATTOO!"
+      }
+    ],
+    "donts": [
+      "DO NOT pick, scratch, or rub your new tattoo",
+      "DO NOT go swimming, sunbathing or tanning for at least 3/4 weeks after being tattooed",
+      "DO NOT let your tattoo dry out. This will cause it to scab and it may lose pigmentation, colour or black and grey work applies. Keep it moisturised at all times to prevent scabbing, cracks, splits, and loss of colour",
+      "DO NOT get your tattoo dirty, and always wash it with clean hands. Please remember that your tattoo is an open wound and it should be treated as such"
+    ],
+    "dos": [
+      "DO let the air to your tattoo as much as possible. Air is a natural healer!",
+      "DO wrap up your tattoo after washing and creaming ONLY IF your tattoo is rubbing on your clothes and is uncomfortable or if you work in a dirty environment, for example if you're working on site, working with chemicals, cars etc. You can use everyday cling film to wrap it up"
+    ],
+    "footer": "If you have any questions or concerns about your tattoo don't hesitate to ring the studio or come straight down and ask for your artist's advice first."
+  }
+}

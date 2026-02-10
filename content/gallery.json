@@ -1,0 +1,133 @@
+{
+  "heading": "Our Work",
+  "description": "Explore our collection of custom tattoo artwork. Each piece represents our commitment to exceptional craftsmanship and unique design.",
+  "filterLabel": "All",
+  "items": [
+    {
+      "id": 1,
+      "image": "https://images.pexels.com/photos/1553267/pexels-photo-1553267.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "alt": "Delicate fine line rose tattoo with intricate shading by Jin",
+      "artist": "Jin",
+      "style": "Fine Line"
+    },
+    {
+      "id": 2,
+      "image": "https://images.pexels.com/photos/1319459/pexels-photo-1319459.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "alt": "Traditional American eagle tattoo with bold colors by Leo",
+      "artist": "Leo",
+      "style": "Traditional"
+    },
+    {
+      "id": 3,
+      "image": "https://images.pexels.com/photos/247287/pexels-photo-247287.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "alt": "Photorealistic black and grey portrait tattoo by Ray",
+      "artist": "Ray",
+      "style": "Realism"
+    },
+    {
+      "id": 4,
+      "image": "https://images.pexels.com/photos/4118474/pexels-photo-4118474.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "alt": "Traditional Japanese dragon sleeve tattoo with vibrant colors by Matt",
+      "artist": "Matt",
+      "style": "Japanese"
+    },
+    {
+      "id": 5,
+      "image": "https://images.pexels.com/photos/3855962/pexels-photo-3855962.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "alt": "Bold blackwork geometric tattoo with strong lines by Nathan",
+      "artist": "Nathan",
+      "style": "Blackwork"
+    },
+    {
+      "id": 6,
+      "image": "https://images.pexels.com/photos/4123897/pexels-photo-4123897.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "alt": "Minimalist mountain landscape fine line tattoo by Jin",
+      "artist": "Jin",
+      "style": "Minimalist"
+    },
+    {
+      "id": 7,
+      "image": "https://images.pexels.com/photos/2183132/pexels-photo-2183132.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "alt": "Neo-traditional animal portrait with vibrant shading by Leo",
+      "artist": "Leo",
+      "style": "Neo-Traditional"
+    },
+    {
+      "id": 8,
+      "image": "https://images.pexels.com/photos/3738386/pexels-photo-3738386.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "alt": "Realistic portrait tattoo with incredible detail by Ray",
+      "artist": "Ray",
+      "style": "Portrait"
+    },
+    {
+      "id": 9,
+      "image": "https://images.pexels.com/photos/1809354/pexels-photo-1809354.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "alt": "Oriental koi fish and cherry blossom design by Matt",
+      "artist": "Matt",
+      "style": "Oriental"
+    },
+    {
+      "id": 10,
+      "image": "https://images.pexels.com/photos/2183133/pexels-photo-2183133.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "alt": "Intricate dotwork mandala tattoo by Nathan",
+      "artist": "Nathan",
+      "style": "Dotwork"
+    },
+    {
+      "id": 11,
+      "image": "https://images.pexels.com/photos/1557652/pexels-photo-1557652.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "alt": "Geometric mandala design with precise lines by Jin",
+      "artist": "Jin",
+      "style": "Geometric"
+    },
+    {
+      "id": 12,
+      "image": "https://images.pexels.com/photos/1787236/pexels-photo-1787236.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "alt": "Classic traditional tattoo with bold color work by Leo",
+      "artist": "Leo",
+      "style": "Traditional"
+    },
+    {
+      "id": 13,
+      "image": "https://images.pexels.com/photos/1040157/pexels-photo-1040157.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "alt": "Black and grey realism with fine details by Ray",
+      "artist": "Ray",
+      "style": "Realism"
+    },
+    {
+      "id": 14,
+      "image": "https://images.pexels.com/photos/7003188/pexels-photo-7003188.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "alt": "Full sleeve Japanese traditional with sacred geometry by Matt",
+      "artist": "Matt",
+      "style": "Japanese"
+    },
+    {
+      "id": 15,
+      "image": "https://images.pexels.com/photos/3670204/pexels-photo-3670204.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "alt": "Ornamental blackwork sleeve tattoo by Nathan",
+      "artist": "Nathan",
+      "style": "Blackwork"
+    },
+    {
+      "id": 16,
+      "image": "https://images.pexels.com/photos/2179237/pexels-photo-2179237.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "alt": "Small scale fine line floral tattoo by Jin",
+      "artist": "Jin",
+      "style": "Fine Line"
+    },
+    {
+      "id": 17,
+      "image": "https://images.pexels.com/photos/2062324/pexels-photo-2062324.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "alt": "Neo-traditional design with strong outlines by Leo",
+      "artist": "Leo",
+      "style": "Neo-Traditional"
+    },
+    {
+      "id": 18,
+      "image": "https://images.pexels.com/photos/4123851/pexels-photo-4123851.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "alt": "Black and grey portrait with emotional depth by Ray",
+      "artist": "Ray",
+      "style": "Black & Grey"
+    }
+  ]
+}

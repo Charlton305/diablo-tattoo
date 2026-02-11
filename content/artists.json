@@ -200,24 +200,76 @@
       "bio": "Jin is a highly experienced tattoo artist with 25 years in the industry, known for his precision, creativity, and dedication to the craft. Having co-owned a successful tattoo studio in Essex, he has built a strong reputation for delivering exceptional work across a wide range of styles. While he is versatile in all forms of tattooing, Jin is particularly passionate about horror realism, where his mastery of detail and atmosphere truly stands out.\n\nBeyond tattooing, Jin is a multi-disciplinary artist who enjoys sculpting, painting, and drawing, constantly expanding his creative skillset. His artistic expertise has also led him to work on numerous special-effects projects, further showcasing his ability to bring imaginative concepts to life.\n\nA lover of dark aesthetics and cult classics, Jin's favourite film is House of 1000 Corpses. When he's not creating art, he can often be found enjoying his favourite meal—Wagyu steak.",
       "galleryImages": [
         {
-          "url": "https://images.pexels.com/photos/1553267/pexels-photo-1553267.jpeg?auto=compress&cs=tinysrgb&w=800",
-          "alt": "Horror realism tattoo by Jin"
+          "src": "/images/artists/jin/jin-horror-pennywise-child.jpg",
+          "alt": "Black and grey realistic Pennywise the clown with child silhouette forearm tattoo by Jin"
         },
         {
-          "url": "https://images.pexels.com/photos/4123897/pexels-photo-4123897.jpeg?auto=compress&cs=tinysrgb&w=800",
-          "alt": "Detailed custom work by Jin"
+          "src": "/images/artists/jin/jin-starry-night-van-gogh-thigh.jpg",
+          "alt": "Colour reproduction of Van Gogh's Starry Night on upper thigh by Jin"
         },
         {
-          "url": "https://images.pexels.com/photos/1557652/pexels-photo-1557652.jpeg?auto=compress&cs=tinysrgb&w=800",
-          "alt": "Creative design by Jin"
+          "src": "/images/artists/jin/jin-coverup-norse-viking-sleeve.jpg",
+          "alt": "Black and grey Norse Viking warrior full sleeve with Celtic knotwork cover-up by Jin"
         },
         {
-          "url": "https://images.pexels.com/photos/2179237/pexels-photo-2179237.jpeg?auto=compress&cs=tinysrgb&w=800",
-          "alt": "Precision tattoo work by Jin"
+          "src": "/images/artists/jin/jin-realistic-eye-closeup.jpg",
+          "alt": "Black and grey hyper-realistic human eye with detailed iris and lashes on upper arm by Jin"
         },
         {
-          "url": "https://images.pexels.com/photos/949131/pexels-photo-949131.jpeg?auto=compress&cs=tinysrgb&w=800",
-          "alt": "Atmospheric tattoo design by Jin"
+          "src": "/images/artists/jin/jin-horror-chucky-forearm.jpg",
+          "alt": "Colour Chucky horror portrait with scarred face on forearm by Jin"
+        },
+        {
+          "src": "/images/artists/jin/jin-coverup-horror-body-face.jpg",
+          "alt": "Black and grey horror face formed from intertwined human bodies cover-up by Jin"
+        },
+        {
+          "src": "/images/artists/jin/jin-portrait-michonne-walking-dead.jpg",
+          "alt": "Black and grey realistic portrait of Michonne from The Walking Dead on forearm by Jin"
+        },
+        {
+          "src": "/images/artists/jin/jin-spiderman-watercolour-splatter.jpg",
+          "alt": "Colour Spider-Man upper arm piece in watercolour splatter style with Stan Lee signature by Jin"
+        },
+        {
+          "src": "/images/artists/jin/jin-coverup-gothic-castle-ocean-stomach.jpg",
+          "alt": "Black and grey gothic castle on stormy seas stomach piece cover-up by Jin"
+        },
+        {
+          "src": "/images/artists/jin/jin-gambling-cards-dice-roulette.jpg",
+          "alt": "Black and grey gambling themed calf piece with playing cards, dice, roulette wheel and dollar bills by Jin"
+        },
+        {
+          "src": "/images/artists/jin/jin-realistic-roaring-lion-chest.jpg",
+          "alt": "Colour realistic roaring lion chest piece by Jin"
+        },
+        {
+          "src": "/images/artists/jin/jin-coverup-horror-skulls-reaper-sleeve.jpg",
+          "alt": "Black and grey horror full sleeve cover-up with skulls, grim reapers and demons shown from multiple angles by Jin"
+        },
+        {
+          "src": "/images/artists/jin/jin-rose-hand-water-droplets.jpg",
+          "alt": "Black and grey realistic rose with water droplets full hand tattoo by Jin"
+        },
+        {
+          "src": "/images/artists/jin/jin-horror-exorcist-regan-thigh.jpg",
+          "alt": "Colour realistic possessed Regan from The Exorcist thigh piece by Jin"
+        },
+        {
+          "src": "/images/artists/jin/jin-coverup-pirate-ship-skull-forearm.jpg",
+          "alt": "Colour pirate galleon with skull bow and red sails cover-up on forearm by Jin"
+        },
+        {
+          "src": "/images/artists/jin/jin-sugar-skull-diamond-roses.jpg",
+          "alt": "Colour sugar skull with diamond eyes and roses thigh piece by Jin"
+        },
+        {
+          "src": "/images/artists/jin/jin-coverup-native-american-portrait.jpg",
+          "alt": "Black and grey realistic Native American chief portrait with headdress and beads upper arm cover-up by Jin"
+        },
+        {
+          "src": "/images/artists/jin/jin-harry-potter-phoenix-steampunk-key.jpg",
+          "alt": "Colour Harry Potter themed collage with wand, script lettering, phoenix and steampunk key by Jin"
         }
       ]
     },

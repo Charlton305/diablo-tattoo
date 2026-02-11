@@ -21,7 +21,7 @@ export default function ArtistsGrid() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </div>
-          <h3 className="text-2xl font-bold group-hover:text-red-600 transition-colors">
+          <h3 className="text-2xl font-bold group-hover:text-accent transition-colors">
             {artist.name}
           </h3>
         </Link>

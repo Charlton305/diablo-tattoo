@@ -20,7 +20,7 @@ export default function Footer() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-gray-400 hover:text-red-600 transition-colors"
+                  className="text-gray-400 hover:text-accent transition-colors"
                 >
                   {item.name}
                 </Link>
@@ -35,7 +35,7 @@ export default function Footer() {
                 href={siteData.socialLinks.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-red-600 transition-colors"
+                className="hover:text-accent transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram className="w-6 h-6" />
@@ -44,7 +44,7 @@ export default function Footer() {
                 href={siteData.socialLinks.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-red-600 transition-colors"
+                className="hover:text-accent transition-colors"
                 aria-label="Facebook"
               >
                 <Facebook className="w-6 h-6" />

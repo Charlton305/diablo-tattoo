@@ -39,7 +39,7 @@ export default function Header() {
             <div className="flex justify-start">
               <Link
                 href="/"
-                className="text-xl sm:text-2xl font-bold tracking-wider hover:text-red-600 transition-colors"
+                className="text-xl sm:text-2xl font-bold tracking-wider hover:text-accent transition-colors"
               >
                 <img src='/diablo-tattoo-logo.png' alt="Diablo Tattoo Logo" className="h-8 sm:h-14" />
               </Link>
@@ -50,10 +50,10 @@ export default function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-sm uppercase tracking-wide hover:text-red-600 transition-colors relative group whitespace-nowrap"
+                  className="text-sm uppercase tracking-wide hover:text-accent transition-colors relative group whitespace-nowrap"
                 >
                   {item.name}
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-600 transition-all group-hover:w-full" />
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all group-hover:w-full" />
                 </Link>
               ))}
             </nav>
@@ -64,7 +64,7 @@ export default function Header() {
                   href={siteData.socialLinks.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-red-600 transition-colors"
+                  className="hover:text-accent transition-colors"
                   aria-label="Instagram"
                 >
                   <Instagram className="w-5 h-5" />
@@ -73,7 +73,7 @@ export default function Header() {
                   href={siteData.socialLinks.facebook}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-red-600 transition-colors"
+                  className="hover:text-accent transition-colors"
                   aria-label="Facebook"
                 >
                   <Facebook className="w-5 h-5" />
@@ -81,7 +81,7 @@ export default function Header() {
               </div>
 
               <button
-                className="lg:hidden text-white hover:text-red-600 transition-colors"
+                className="lg:hidden text-white hover:text-accent transition-colors"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 aria-label="Toggle menu"
               >
@@ -107,7 +107,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-lg uppercase tracking-wide hover:text-red-600 transition-colors"
+                className="text-lg uppercase tracking-wide hover:text-accent transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.name}
@@ -118,7 +118,7 @@ export default function Header() {
                 href={siteData.socialLinks.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-red-600 transition-colors"
+                className="hover:text-accent transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram className="w-6 h-6" />
@@ -127,7 +127,7 @@ export default function Header() {
                 href={siteData.socialLinks.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-red-600 transition-colors"
+                className="hover:text-accent transition-colors"
                 aria-label="Facebook"
               >
                 <Facebook className="w-6 h-6" />

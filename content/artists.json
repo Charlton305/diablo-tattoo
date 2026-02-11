@@ -281,24 +281,172 @@
       "bio": "Matt is a tattoo artist with over 15 years of experience, bringing creativity and meaning to every piece he creates. Before tattooing, Matt spent 22 years as a graphic designer, building a strong foundation in design and detail.\n\nDuring the Covid years, Matt explored painting commissions, focusing on portraits and animal artwork that captured the unique personality of each subject.\n\nOutside of art, Matt has been playing drums since 1980. His band tours across Europe and the U.S.\n\nArt and music have always been at the heart of what he does, and he loves sharing that passion with others.",
       "galleryImages": [
         {
-          "url": "https://images.pexels.com/photos/4118474/pexels-photo-4118474.jpeg?auto=compress&cs=tinysrgb&w=800",
-          "alt": "Custom tattoo design by Matt"
+          "src": "/images/artists/matt/matt-dog-portrait-reggie-forearm.jpg",
+          "alt": "Black and grey realistic Staffordshire Bull Terrier portrait with name Reggie script on forearm by Matt"
         },
         {
-          "url": "https://images.pexels.com/photos/1809354/pexels-photo-1809354.jpeg?auto=compress&cs=tinysrgb&w=800",
-          "alt": "Portrait tattoo work by Matt"
+          "src": "/images/artists/matt/matt-fire-water-dancer-silhouette-calf.jpg",
+          "alt": "Colour fire and water dancer silhouette calf piece with flames and teal waves by Matt"
         },
         {
-          "url": "https://images.pexels.com/photos/7003188/pexels-photo-7003188.jpeg?auto=compress&cs=tinysrgb&w=800",
-          "alt": "Detailed tattoo by Matt"
+          "src": "/images/artists/matt/matt-coverup-lilies-lace-back.jpg",
+          "alt": "Colour blue lilies with black lace and pearls back piece cover-up over faded vine scroll by Matt"
         },
         {
-          "url": "https://images.pexels.com/photos/1619792/pexels-photo-1619792.jpeg?auto=compress&cs=tinysrgb&w=800",
-          "alt": "Creative design by Matt"
+          "src": "/images/artists/matt/matt-norse-valkyrie-wolves-torso.jpg",
+          "alt": "Black and grey Norse valkyrie with wolves and Celtic knotwork full chest and stomach piece by Matt"
         },
         {
-          "url": "https://images.pexels.com/photos/1322185/pexels-photo-1322185.jpeg?auto=compress&cs=tinysrgb&w=800",
-          "alt": "Animal portrait tattoo by Matt"
+          "src": "/images/artists/matt/matt-traditional-shark-pinup-poison-bottle.jpg",
+          "alt": "Colour traditional style pin-up girl riding shark and poison bottle with skull and crossbones by Matt"
+        },
+        {
+          "src": "/images/artists/matt/matt-floral-vase-peonies-forearm.jpg",
+          "alt": "Black and grey ornate vase with peonies and roses forearm piece by Matt"
+        },
+        {
+          "src": "/images/artists/matt/matt-coverup-peonies-cherry-blossom-lower-back.jpg",
+          "alt": "Colour teal peonies with pink cherry blossoms lower back cover-up by Matt"
+        },
+        {
+          "src": "/images/artists/matt/matt-peacock-maple-leaves-thigh.jpg",
+          "alt": "Colour peacock with flowing tail feathers and red maple leaves thigh piece by Matt"
+        },
+        {
+          "src": "/images/artists/matt/matt-four-horsemen-apocalypse-backpiece.jpg",
+          "alt": "Black and grey Four Horsemen of the Apocalypse full back piece in woodcut engraving style by Matt"
+        },
+        {
+          "src": "/images/artists/matt/matt-raven-wolf-moonlight-upper-arm.jpg",
+          "alt": "Colour raven with wolf silhouette in moonlit forest scene upper arm piece by Matt"
+        },
+        {
+          "src": "/images/artists/matt/matt-coverup-rat-fink-hotrod-sleeve.jpg",
+          "alt": "Colour Rat Fink hot rod half sleeve cover-up over faded old school design by Matt"
+        },
+        {
+          "src": "/images/artists/matt/matt-leopard-african-savanna-calf.jpg",
+          "alt": "Black and grey snarling leopard with African savanna silhouette and giraffes calf piece by Matt"
+        },
+        {
+          "src": "/images/artists/matt/matt-robin-realistic-ankle.jpg",
+          "alt": "Colour realistic robin perched on branch ankle piece by Matt"
+        },
+        {
+          "src": "/images/artists/matt/matt-day-of-dead-skulls-roses-sleeve.jpg",
+          "alt": "Black and grey Day of the Dead full sleeve with sugar skull women, skulls, roses and butterflies by Matt"
+        },
+        {
+          "src": "/images/artists/matt/matt-coverup-phoenix-lace-back.jpg",
+          "alt": "Colour phoenix with lace frame and blood drop details back piece cover-up by Matt"
+        },
+        {
+          "src": "/images/artists/matt/matt-stitch-zombie-watercolour.jpg",
+          "alt": "Colour Stitch dressed as zombie in watercolour splatter style by Matt"
+        },
+        {
+          "src": "/images/artists/matt/matt-lips-rosary-crucifix.jpg",
+          "alt": "Black and grey realistic lips biting rosary beads with crucifix forearm piece by Matt"
+        },
+        {
+          "src": "/images/artists/matt/matt-art-nouveau-mucha-woman-upper-arm.jpg",
+          "alt": "Colour Art Nouveau woman in Alphonse Mucha style with starry gown upper arm piece by Matt"
+        },
+        {
+          "src": "/images/artists/matt/matt-coverup-red-rose-wrist.jpg",
+          "alt": "Colour realistic red rose wrist cover-up over old faded rose by Matt"
+        },
+        {
+          "src": "/images/artists/matt/matt-nightmare-before-christmas-half-sleeve.jpg",
+          "alt": "Black and grey Nightmare Before Christmas half sleeve with Jack Skellington and characters by Matt"
+        },
+        {
+          "src": "/images/artists/matt/matt-peonies-lace-mandala-shin.jpg",
+          "alt": "Colour orange peonies with black lace mandala pattern shin to foot piece by Matt"
+        },
+        {
+          "src": "/images/artists/matt/matt-dark-mark-deathly-hallows-forearm.jpg",
+          "alt": "Black and grey Harry Potter Dark Mark with Deathly Hallows symbol and dotwork forearm piece by Matt"
+        },
+        {
+          "src": "/images/artists/matt/matt-coverup-butterflies-moon-peony-wrist.jpg",
+          "alt": "Colour butterflies with crescent moon and peony wrist cover-up over Celtic knot by Matt"
+        },
+        {
+          "src": "/images/artists/matt/matt-crash-bandicoot-tiki-masks-calves.jpg",
+          "alt": "Colour Crash Bandicoot Aku Aku and Uka Uka tiki masks with hibiscus matching calf pieces by Matt"
+        },
+        {
+          "src": "/images/artists/matt/matt-mandala-geometric-sleeve.jpg",
+          "alt": "Black and grey geometric mandala full sleeve with dotwork and flower of life patterns by Matt"
+        },
+        {
+          "src": "/images/artists/matt/matt-feathers-chicken-knife-calf.jpg",
+          "alt": "Colour realistic Feathers from Chicken Run holding knife calf piece by Matt"
+        },
+        {
+          "src": "/images/artists/matt/matt-coverup-football-crest-shield-calf.jpg",
+          "alt": "Colour detailed football club crest shield calf cover-up over old faded badge by Matt"
+        },
+        {
+          "src": "/images/artists/matt/matt-snake-dagger-spine.jpg",
+          "alt": "Black and grey ornate dagger with snake and script lettering spine piece by Matt"
+        },
+        {
+          "src": "/images/artists/matt/matt-samurai-warrior-japanese-castle-thigh.jpg",
+          "alt": "Colour samurai warrior with Japanese castle and red sun thigh piece by Matt"
+        },
+        {
+          "src": "/images/artists/matt/matt-ornamental-elephant-stomach.jpg",
+          "alt": "Black and grey ornamental elephant head with decorative headdress stomach piece by Matt"
+        },
+        {
+          "src": "/images/artists/matt/matt-coverup-koi-lotus-japanese-sleeve.jpg",
+          "alt": "Colour Japanese koi fish with lotus flowers and waves half sleeve cover-up by Matt"
+        },
+        {
+          "src": "/images/artists/matt/matt-black-jaguar-tropical-leaves-calf.jpg",
+          "alt": "Colour realistic black jaguar prowling through tropical monstera leaves calf piece by Matt"
+        },
+        {
+          "src": "/images/artists/matt/matt-girl-dog-kiss-heart-shoulder.jpg",
+          "alt": "Black and grey woman kissing dog in heart shape with paw prints shoulder blade piece by Matt"
+        },
+        {
+          "src": "/images/artists/matt/matt-pink-peonies-bee-shoulder.jpg",
+          "alt": "Colour pink peonies with bumblebee shoulder piece by Matt"
+        },
+        {
+          "src": "/images/artists/matt/matt-coverup-poppies-holly-daffodils-shoulder.jpg",
+          "alt": "Black and grey poppies, holly and daffodils bouquet with ribbon bow shoulder blade cover-up by Matt"
+        },
+        {
+          "src": "/images/artists/matt/matt-woman-tiger-morph-mandala-thigh.jpg",
+          "alt": "Black and grey woman and tiger face morph with mandala lotus crown and flowers thigh piece by Matt"
+        },
+        {
+          "src": "/images/artists/matt/matt-teddy-bear-rose-ankle.jpg",
+          "alt": "Colour teddy bear holding orange rose ankle piece by Matt"
+        },
+        {
+          "src": "/images/artists/matt/matt-tree-of-life-woman-thigh.jpg",
+          "alt": "Black and grey tree of life with woman figure emerging from trunk thigh piece by Matt"
+        },
+        {
+          "src": "/images/artists/matt/matt-coverup-pink-blue-roses-hip.jpg",
+          "alt": "Colour pink and blue roses with green leaves hip cover-up over faded tribal by Matt"
+        },
+        {
+          "src": "/images/artists/matt/matt-mermaid-flowing-hair-calf.jpg",
+          "alt": "Black and grey mermaid with flowing hair and bubbles calf piece by Matt"
+        },
+        {
+          "src": "/images/artists/matt/matt-ornamental-lion-lotus-shin.jpg",
+          "alt": "Black and grey ornamental lion with mandala crown and lotus flower shin to foot piece by Matt"
+        },
+        {
+          "src": "/images/artists/matt/matt-stag-beetle-blackberry-botanical.jpg",
+          "alt": "Black and grey stag beetle with blackberry brambles and wild rose botanical upper arm piece by Matt"
         }
       ]
     },

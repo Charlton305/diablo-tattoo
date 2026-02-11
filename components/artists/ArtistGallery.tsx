@@ -64,7 +64,7 @@ export default function ArtistGallery({ images }: ArtistGalleryProps) {
 
         <button
           onClick={() => emblaMainApi?.scrollPrev()}
-          className='absolute left-4 top-1/2 -translate-y-1/2 bg-black/80 hover:bg-red-600 p-3 transition-colors'
+          className='absolute left-4 top-1/2 -translate-y-1/2 bg-black/80 hover:bg-accent p-3 transition-colors'
           aria-label='Previous image'
         >
           <ChevronLeft className='w-6 h-6' />
@@ -72,7 +72,7 @@ export default function ArtistGallery({ images }: ArtistGalleryProps) {
 
         <button
           onClick={() => emblaMainApi?.scrollNext()}
-          className='absolute right-4 top-1/2 -translate-y-1/2 bg-black/80 hover:bg-red-600 p-3 transition-colors'
+          className='absolute right-4 top-1/2 -translate-y-1/2 bg-black/80 hover:bg-accent p-3 transition-colors'
           aria-label='Next image'
         >
           <ChevronRight className='w-6 h-6' />
@@ -88,7 +88,7 @@ export default function ArtistGallery({ images }: ArtistGalleryProps) {
       <div className='hidden md:flex items-center gap-2 max-w-4xl mx-auto'>
         <button
           onClick={() => emblaThumbsApi?.scrollPrev()}
-          className='shrink-0 bg-black/80 hover:bg-red-600 p-2 transition-colors'
+          className='shrink-0 bg-black/80 hover:bg-accent p-2 transition-colors'
           aria-label='Previous thumbnails'
         >
           <ChevronLeft className='w-4 h-4' />
@@ -102,7 +102,7 @@ export default function ArtistGallery({ images }: ArtistGalleryProps) {
                 onClick={() => emblaMainApi?.scrollTo(index)}
                 className={`flex-[0_0_calc(33.333%-6px)] lg:flex-[0_0_calc(20%-6.4px)] min-w-0 relative aspect-square overflow-hidden transition-all ${
                   index === selectedIndex
-                    ? 'ring-2 ring-red-600 opacity-100'
+                    ? 'ring-2 ring-ring opacity-100'
                     : 'opacity-50 hover:opacity-80'
                 }`}
                 aria-label={`View image ${index + 1}`}
@@ -120,7 +120,7 @@ export default function ArtistGallery({ images }: ArtistGalleryProps) {
 
         <button
           onClick={() => emblaThumbsApi?.scrollNext()}
-          className='shrink-0 bg-black/80 hover:bg-red-600 p-2 transition-colors'
+          className='shrink-0 bg-black/80 hover:bg-accent p-2 transition-colors'
           aria-label='Next thumbnails'
         >
           <ChevronRight className='w-4 h-4' />

@@ -44,9 +44,9 @@ export default function GuideSection() {
             <h2 className="text-3xl sm:text-4xl font-bold mb-6">
               {aftercare.heading}
             </h2>
-            <div className="bg-red-900/20 border-l-4 border-red-600 p-6 mb-10">
+            <div className="bg-red-900/20 border-l-4 border-accent p-6 mb-10">
               <div className="flex">
-                <AlertCircle className="h-6 w-6 text-red-500 flex-shrink-0 mt-0.5" />
+                <AlertCircle className="h-6 w-6 text-accent flex-shrink-0 mt-0.5" />
                 <p className="ml-4 text-gray-300 leading-relaxed">
                   {aftercare.intro}
                 </p>
@@ -69,7 +69,7 @@ export default function GuideSection() {
             <div className="grid md:grid-cols-2 gap-6 mb-10">
               <div className="border border-red-900/50 bg-red-950/30 p-6">
                 <div className="flex items-center mb-6">
-                  <XCircle className="h-6 w-6 text-red-500 mr-2" />
+                  <XCircle className="h-6 w-6 text-accent mr-2" />
                   <h3 className="text-xl font-semibold">
                     DO NOT
                   </h3>
@@ -77,7 +77,7 @@ export default function GuideSection() {
                 <ul className="space-y-3">
                   {aftercare.donts.map((dont, index) => (
                     <li key={index} className="flex items-start">
-                      <span className="text-red-500 mr-3 flex-shrink-0 text-xl leading-none">✕</span>
+                      <span className="text-accent mr-3 flex-shrink-0 text-xl leading-none">✕</span>
                       <span className="text-gray-300 leading-relaxed">
                         {dont.replace('DO NOT ', '')}
                       </span>

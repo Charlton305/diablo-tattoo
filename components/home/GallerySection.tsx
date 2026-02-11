@@ -31,7 +31,7 @@ export default function GallerySection() {
         <div className="text-center">
           <Link
             href="/gallery"
-            className="inline-block px-8 py-3 bg-red-600 hover:bg-red-700 transition-colors uppercase tracking-wider font-semibold"
+            className="inline-block px-8 py-3 bg-accent hover:bg-accent transition-colors uppercase tracking-wider font-semibold"
           >
             View Full Gallery
           </Link>

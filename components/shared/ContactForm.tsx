@@ -33,20 +33,20 @@ export default function ContactForm({ variant = 'dark' }: ContactFormProps) {
           type="text"
           id="name"
           name="name"
-          className={`w-full ${inputBgClass} border border-white/20 px-4 py-3 focus:outline-none focus:border-red-600 transition-colors`}
+          className={`w-full ${inputBgClass} border border-white/20 px-4 py-3 focus:outline-none focus:border-accent transition-colors`}
         />
       </div>
 
       <div>
         <label htmlFor="email" className="block text-sm mb-2">
-          Email <span className="text-red-600">*</span>
+          Email <span className="text-accent">*</span>
         </label>
         <input
           type="email"
           id="email"
           name="email"
           required
-          className={`w-full ${inputBgClass} border border-white/20 px-4 py-3 focus:outline-none focus:border-red-600 transition-colors`}
+          className={`w-full ${inputBgClass} border border-white/20 px-4 py-3 focus:outline-none focus:border-accent transition-colors`}
         />
       </div>
 
@@ -58,26 +58,26 @@ export default function ContactForm({ variant = 'dark' }: ContactFormProps) {
           type="tel"
           id="phone"
           name="phone"
-          className={`w-full ${inputBgClass} border border-white/20 px-4 py-3 focus:outline-none focus:border-red-600 transition-colors`}
+          className={`w-full ${inputBgClass} border border-white/20 px-4 py-3 focus:outline-none focus:border-accent transition-colors`}
         />
       </div>
 
       <div>
         <label htmlFor="message" className="block text-sm mb-2">
-          Message <span className="text-red-600">*</span>
+          Message <span className="text-accent">*</span>
         </label>
         <textarea
           id="message"
           name="message"
           rows={6}
           required
-          className={`w-full ${inputBgClass} border border-white/20 px-4 py-3 focus:outline-none focus:border-red-600 transition-colors resize-none`}
+          className={`w-full ${inputBgClass} border border-white/20 px-4 py-3 focus:outline-none focus:border-accent transition-colors resize-none`}
         />
       </div>
 
       <div>
         <label className="block text-sm mb-2">File Upload</label>
-        <div className="relative border-2 border-dashed border-white/20 hover:border-red-600 transition-colors">
+        <div className="relative border-2 border-dashed border-white/20 hover:border-accent transition-colors">
           <input
             type="file"
             id="file"
@@ -111,7 +111,7 @@ export default function ContactForm({ variant = 'dark' }: ContactFormProps) {
 
       <button
         type="submit"
-        className="w-full px-8 py-3 bg-red-600 hover:bg-red-700 transition-colors uppercase tracking-wider font-semibold"
+        className="w-full px-8 py-3 bg-accent hover:bg-accent transition-colors uppercase tracking-wider font-semibold"
       >
         Send
       </button>

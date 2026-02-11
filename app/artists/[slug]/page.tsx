@@ -22,7 +22,7 @@ export default function ArtistPage({ params }: { params: { slug: string } }) {
         <main className='pt-20 min-h-screen flex items-center justify-center'>
           <div className='text-center'>
             <h1 className='text-4xl font-bold mb-4'>Artist Not Found</h1>
-            <Link href='/artists' className='text-red-600 hover:underline'>
+            <Link href='/artists' className='text-accent hover:underline'>
               Back to Artists
             </Link>
           </div>
@@ -65,7 +65,7 @@ export default function ArtistPage({ params }: { params: { slug: string } }) {
 
                 <Link
                   href='/contact'
-                  className='inline-block px-8 py-3 bg-red-600 hover:bg-red-700 transition-colors uppercase tracking-wider font-semibold mt-4'
+                  className='inline-block px-8 py-3 bg-accent hover:bg-accent transition-colors uppercase tracking-wider font-semibold mt-4'
                 >
                   Book with {artist.name}
                 </Link>

@@ -31,7 +31,7 @@ export default function ContactSection() {
 
               <div className="space-y-4">
                 <div className="flex items-start space-x-4">
-                  <MapPin className="w-6 h-6 text-red-600 flex-shrink-0 mt-1" />
+                  <MapPin className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
                   <div>
                     <p className="font-semibold mb-1">Address</p>
                     <p className="text-gray-400">{siteData.address}</p>
@@ -39,7 +39,7 @@ export default function ContactSection() {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <Phone className="w-6 h-6 text-red-600 flex-shrink-0 mt-1" />
+                  <Phone className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
                   <div>
                     <p className="font-semibold mb-1">Phone</p>
                     <a
@@ -52,7 +52,7 @@ export default function ContactSection() {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <Mail className="w-6 h-6 text-red-600 flex-shrink-0 mt-1" />
+                  <Mail className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
                   <div>
                     <p className="font-semibold mb-1">Email</p>
                     <a

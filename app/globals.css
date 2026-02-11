@@ -7,8 +7,6 @@
   --foreground: 0 0% 100%;
   --card: 0 0% 5%;
   --card-foreground: 0 0% 100%;
-  --popover: 0 0% 5%;
-  --popover-foreground: 0 0% 100%;
   --primary: 0 0% 100%;
   --primary-foreground: 0 0% 0%;
   --secondary: 0 0% 10%;
@@ -17,25 +15,19 @@
   --muted-foreground: 0 0% 60%;
   --accent: 0 72% 51%;
   --accent-foreground: 0 0% 100%;
-  --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 0 0% 100%;
   --border: 0 0% 20%;
   --input: 0 0% 20%;
   --ring: 0 72% 51%;
-  --radius: 0.5rem;
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
-
   html {
     scroll-behavior: smooth;
   }
 
   body {
     @apply bg-black text-white;
+    font-family: var(--font-garamond);
     font-feature-settings: "kern" 1;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -46,25 +38,21 @@
     font-family: var(--font-playfair);
     font-weight: 400;
   }
-
-  body {
-    font-family: var(--font-garamond);
-  }
 }
 
 @layer utilities {
   .fade-in {
-    animation: fadeIn 0.8s ease-in forwards;
+    animation: fadeIn 0.8s ease-in-out forwards;
     opacity: 0;
   }
 
   .fade-in-delay-1 {
-    animation: fadeIn 0.8s ease-in 0.2s forwards;
+    animation: fadeIn 0.8s ease-in-out 0.2s forwards;
     opacity: 0;
   }
 
   .fade-in-delay-2 {
-    animation: fadeIn 0.8s ease-in 0.4s forwards;
+    animation: fadeIn 0.8s ease-in-out 0.4s forwards;
     opacity: 0;
   }
 

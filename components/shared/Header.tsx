@@ -41,7 +41,7 @@ export default function Header() {
                 href="/"
                 className="text-xl sm:text-2xl font-bold tracking-wider hover:text-red-600 transition-colors"
               >
-                {siteData.siteName}
+                <img src='/diablo-tattoo-logo.png' alt="Diablo Tattoo Logo" className="h-8 sm:h-14" />
               </Link>
             </div>
 

@@ -9,7 +9,7 @@ export default function ArtistsPage() {
       <Header />
       <main className="pt-20">
         <section className="py-20 md:py-32 bg-black">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-8xl">
+          <div className="container mx-auto px-4 max-w-8xl">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-center mb-8">
               {artistsContent.heading}
             </h1>

@@ -8,7 +8,7 @@ const config: Config = {
   theme: {
     extend: {
       maxWidth: {
-        '8xl': '90rem',
+        '8xl': '95rem',
       },
       colors: {
         background: 'hsl(var(--background))',

@@ -102,7 +102,7 @@ export default function ArtistGallery({ images }: ArtistGalleryProps) {
                 onClick={() => emblaMainApi?.scrollTo(index)}
                 className={`flex-[0_0_calc(33.333%-6px)] lg:flex-[0_0_calc(20%-6.4px)] min-w-0 relative aspect-square overflow-hidden transition-all ${
                   index === selectedIndex
-                    ? 'ring-2 ring-ring opacity-100'
+                    ? 'opacity-100'
                     : 'opacity-50 hover:opacity-80'
                 }`}
                 aria-label={`View image ${index + 1}`}

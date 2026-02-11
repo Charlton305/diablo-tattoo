@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(npx next build:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nRemove unused Bolt scaffolding: shadcn/ui, unused deps, hardcoded colors\n\n- Delete all 47 unused components/ui/ files, components.json, lib/utils.ts, hooks/use-toast.ts\n- Remove 22 unused npm packages \\(radix-ui, cva, clsx, supabase, recharts, zod, etc.\\)\n- Replace hardcoded red-600/500/700 classes with accent/ring theme classes\n- Fix Matt gallery images: replace Bolt placeholder Pexels URLs with real local images\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git commit:*)",
+      "Bash(node -e:*)"
+    ]
+  }
+}

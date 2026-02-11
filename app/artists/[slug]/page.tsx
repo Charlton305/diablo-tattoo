@@ -5,17 +5,21 @@ import Header from '@/components/shared/Header'
 import Footer from '@/components/shared/Footer'
 import ArtistGallery from '@/components/artists/ArtistGallery'
 import artistsContent from '@/content/artists.json'
+import LinkButton from '@/components/shared/LinkButton'
 
 export const dynamicParams = false
 
-export function generateStaticParams() {
+export async function generateStaticParams() {
   return artistsContent.artists.map(artist => ({
     slug: artist.slug,
   }))
 }
 
-export default function ArtistPage({ params }: { params: { slug: string } }) {
-  const artist = artistsContent.artists.find(a => a.slug === params.slug)!
+export default async function ArtistPage({ params }: { params: { slug: string } }) {
+  const { slug } = await params
+  const artist = artistsContent.artists.find(a => a.slug === slug)!
+
+  const buttonText = artist.isArtist ? `Book with ${artist.name}` : 'Get in touch'
 
   return (
     <>
@@ -33,27 +37,16 @@ export default function ArtistPage({ params }: { params: { slug: string } }) {
 
             <div className='grid md:grid-cols-2 gap-12 md:gap-16 mb-16'>
               <div className='relative aspect-[3/4] overflow-hidden'>
-                <Image
-                  src={artist.image}
-                  alt={artist.imageAlt}
-                  fill
-                  className='object-cover'
-                  sizes='(max-width: 768px) 100vw, 50vw'
-                />
+                <Image src={artist.image} alt={artist.imageAlt} fill className='object-cover' />
               </div>
 
               <div className='space-y-6'>
-                <h1 className='text-4xl sm:text-5xl md:text-6xl font-bold'>{artist.name}</h1>
+                <h1 className='text-4xl sm:text-4xL uppercase md:text-5xl font-bold'>{artist.name}</h1>
                 <p className='text-lg leading-relaxed text-gray-300 whitespace-pre-line'>
                   {artist.bio}
                 </p>
 
-                <Link
-                  href='/contact'
-                  className='inline-block px-8 py-3 bg-accent hover:bg-accent transition-colors uppercase tracking-wider font-semibold mt-4'
-                >
-                  Book with {artist.name}
-                </Link>
+                <LinkButton href='/contact'>{buttonText}</LinkButton>
               </div>
             </div>
 

@@ -1,6 +1,7 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Playfair_Display, EB_Garamond } from 'next/font/google';
+import siteData from '@/content/site.json';
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -15,9 +16,9 @@ const garamond = EB_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: 'Diablo Tattoo - Custom Art & Bespoke Design | Rochester, Kent',
-  description: 'Located in the heart of Rochester High Street, Diablo Tattoo is home to five talented artists creating custom artwork as unique as you are.',
-  keywords: 'tattoo, custom tattoo, Rochester, Kent, tattoo studio, bespoke design, tattoo artists',
+  title: siteData.siteTitle,
+  description: siteData.siteDescription,
+  keywords: siteData.siteKeywords,
 };
 
 export default function RootLayout({

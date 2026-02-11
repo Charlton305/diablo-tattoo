@@ -6,6 +6,8 @@ import Footer from '@/components/shared/Footer'
 import ArtistGallery from '@/components/artists/ArtistGallery'
 import artistsContent from '@/content/artists.json'
 
+export const dynamicParams = false
+
 export function generateStaticParams() {
   return artistsContent.artists.map(artist => ({
     slug: artist.slug,
@@ -13,24 +15,7 @@ export function generateStaticParams() {
 }
 
 export default function ArtistPage({ params }: { params: { slug: string } }) {
-  const artist = artistsContent.artists.find(a => a.slug === params.slug)
-
-  if (!artist) {
-    return (
-      <>
-        <Header />
-        <main className='pt-20 min-h-screen flex items-center justify-center'>
-          <div className='text-center'>
-            <h1 className='text-4xl font-bold mb-4'>Artist Not Found</h1>
-            <Link href='/artists' className='text-accent hover:underline'>
-              Back to Artists
-            </Link>
-          </div>
-        </main>
-        <Footer />
-      </>
-    )
-  }
+  const artist = artistsContent.artists.find(a => a.slug === params.slug)!
 
   return (
     <>

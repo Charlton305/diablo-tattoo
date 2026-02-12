@@ -1,7 +1,11 @@
-import homepageData from '@/content/homepage.json';
 import ContactForm from '@/components/shared/ContactForm';
+import type { HomepageContact } from '@/tina/__generated__/types';
 
-export default function ContactSection() {
+interface ContactSectionProps {
+  contact: HomepageContact | null | undefined;
+}
+
+export default function ContactSection({ contact }: ContactSectionProps) {
 
   return (
     <section className="py-20 md:py-32 bg-zinc-950">
@@ -9,10 +13,10 @@ export default function ContactSection() {
         <div className="grid md:grid-cols-2 gap-12 md:gap-16">
           <div className="space-y-6">
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-8">
-              {homepageData.contact.heading}
+              {contact?.heading ?? ''}
             </h2>
             <div className="space-y-4 text-lg leading-relaxed text-gray-300">
-              {homepageData.contact.description
+              {(contact?.description ?? '')
                 .split('\n\n')
                 .map((paragraph, index) => (
                   <p key={index}>{paragraph}</p>

@@ -2,6 +2,8 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Playfair_Display, EB_Garamond } from 'next/font/google';
 import siteData from '@/content/site.json';
+import Header from '@/components/shared/Header';
+import Footer from '@/components/shared/Footer';
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -28,7 +30,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${playfair.variable} ${garamond.variable}`}>
-      <body>{children}</body>
+      <body>
+        <Header />
+        <main>{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }

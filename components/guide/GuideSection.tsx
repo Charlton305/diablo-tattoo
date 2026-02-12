@@ -1,10 +1,17 @@
 'use client'
 
 import { AlertCircle, CheckCircle, XCircle } from 'lucide-react'
-import guideContent from '@/content/guide.json'
+import type { GuideQuery } from '@/tina/__generated__/types'
 
-export default function GuideSection() {
-  const { heading, description, beforeSession, aftercare } = guideContent
+interface GuideSectionProps {
+  data: GuideQuery['guide']
+}
+
+export default function GuideSection({ data }: GuideSectionProps) {
+  const heading = data.heading ?? ''
+  const description = data.description ?? ''
+  const beforeSession = data.beforeSession
+  const aftercare = data.aftercare
 
   return (
     <section className='py-20 md:py-32 bg-black'>
@@ -16,36 +23,38 @@ export default function GuideSection() {
 
         <div className='space-y-16'>
           <div className='border border-white/20 bg-zinc-900/50 p-8 sm:p-10'>
-            <h2 className='text-3xl sm:text-4xl font-bold mb-6'>{beforeSession.heading}</h2>
-            <p className='text-gray-300 mb-10 leading-relaxed text-lg'>{beforeSession.intro}</p>
+            <h2 className='text-3xl sm:text-4xl font-bold mb-6'>{beforeSession?.heading ?? ''}</h2>
+            <p className='text-gray-300 mb-10 leading-relaxed text-lg'>
+              {beforeSession?.intro ?? ''}
+            </p>
             <div className='space-y-6'>
-              {beforeSession.items.map(item => (
-                <div key={item.id} className='py-1'>
-                  <h3 className='text-xl font-semibold mb-3'>{item.title}</h3>
-                  <p className='text-gray-300 leading-relaxed'>{item.content}</p>
+              {(beforeSession?.items ?? []).filter(Boolean).map((item, index) => (
+                <div key={index} className='py-1'>
+                  <h3 className='text-xl font-semibold mb-3'>{item!.title ?? ''}</h3>
+                  <p className='text-gray-300 leading-relaxed'>{item!.content ?? ''}</p>
                 </div>
               ))}
             </div>
           </div>
 
           <div className='border border-white/20 bg-zinc-900/50 p-8 sm:p-10'>
-            <h2 className='text-3xl sm:text-4xl font-bold mb-6'>{aftercare.heading}</h2>
+            <h2 className='text-3xl sm:text-4xl font-bold mb-6'>{aftercare?.heading ?? ''}</h2>
             <div className='bg-red-900/20 border-l-4 border-accent p-6 mb-10'>
               <div className='flex'>
                 <AlertCircle className='h-6 w-6 text-accent flex-shrink-0 mt-0.5' />
-                <p className='ml-4 text-gray-300 leading-relaxed'>{aftercare.intro}</p>
+                <p className='ml-4 text-gray-300 leading-relaxed'>{aftercare?.intro ?? ''}</p>
               </div>
             </div>
 
             <div className='mb-10'>
               <h3 className='text-2xl font-semibold mb-6'>Aftercare Steps</h3>
               <div className='space-y-4'>
-                {aftercare.instructions.map(instruction => (
+                {(aftercare?.instructions ?? []).filter(Boolean).map((instruction, index) => (
                   <p
-                    key={instruction.id}
+                    key={index}
                     className='text-gray-300 leading-relaxed border-l-2 border-white/20 pl-4 py-1'
                   >
-                    {instruction.content}
+                    {instruction!.content ?? ''}
                   </p>
                 ))}
               </div>
@@ -58,11 +67,11 @@ export default function GuideSection() {
                   <h3 className='text-xl font-semibold'>DO NOT</h3>
                 </div>
                 <ul className='space-y-3'>
-                  {aftercare.donts.map((dont, index) => (
+                  {(aftercare?.donts ?? []).filter(Boolean).map((dont, index) => (
                     <li key={index} className='flex items-start'>
                       <span className='text-accent mr-3 flex-shrink-0 text-xl leading-none'>✕</span>
                       <span className='text-gray-300 leading-relaxed'>
-                        {dont.replace('DO NOT ', '')}
+                        {(dont ?? '').replace('DO NOT ', '')}
                       </span>
                     </li>
                   ))}
@@ -75,13 +84,13 @@ export default function GuideSection() {
                   <h3 className='text-xl font-semibold'>DO</h3>
                 </div>
                 <ul className='space-y-3'>
-                  {aftercare.dos.map((doItem, index) => (
+                  {(aftercare?.dos ?? []).filter(Boolean).map((doItem, index) => (
                     <li key={index} className='flex items-start'>
                       <span className='text-green-500 mr-3 flex-shrink-0 text-xl leading-none'>
                         ✓
                       </span>
                       <span className='text-gray-300 leading-relaxed'>
-                        {doItem.replace('DO ', '')}
+                        {(doItem ?? '').replace('DO ', '')}
                       </span>
                     </li>
                   ))}
@@ -90,7 +99,7 @@ export default function GuideSection() {
             </div>
 
             <div className='bg-zinc-800/50 border-l-4 border-white/30 p-6'>
-              <p className='text-gray-300 leading-relaxed'>{aftercare.footer}</p>
+              <p className='text-gray-300 leading-relaxed'>{aftercare?.footer ?? ''}</p>
             </div>
           </div>
         </div>

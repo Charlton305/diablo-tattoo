@@ -1,17 +1,8 @@
-import Header from '@/components/shared/Header';
-import Footer from '@/components/shared/Footer';
-import GuideSection from '@/components/guide/GuideSection';
-import ContactSection from '@/components/shared/ContactSection';
+import client from '@/tina/__generated__/client'
+import GuidePageClient from './guide-client'
 
-export default function GuidePage() {
-  return (
-    <>
-      <Header />
-      <main className="pt-20">
-        <GuideSection />
-        <ContactSection />
-      </main>
-      <Footer />
-    </>
-  );
+export default async function GuidePage() {
+  const guideResult = await client.queries.guide({ relativePath: 'guide.json' })
+  const homepageResult = await client.queries.homepage({ relativePath: 'homepage.json' })
+  return <GuidePageClient guide={guideResult} homepage={homepageResult} />
 }

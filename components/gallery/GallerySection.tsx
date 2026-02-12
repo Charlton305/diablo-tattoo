@@ -3,21 +3,22 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import { X } from 'lucide-react'
-import galleryData from '@/content/gallery.json'
-import artistsContent from '@/content/artists.json'
 
 export default function GallerySection({
   images,
+  heading,
+  description,
+  artistNames,
 }: {
   images: { src: string; alt: string; artist: string }[]
+  heading: string
+  description: string
+  artistNames: string[]
 }) {
   const [selectedArtist, setSelectedArtist] = useState('All')
   const [lightboxImage, setLightboxImage] = useState<number | null>(null)
 
-  const artists = [
-    'All',
-    ...artistsContent.artists.filter(artist => artist.isArtist).map(artist => artist.name),
-  ]
+  const artists = ['All', ...artistNames]
 
   const filteredImages =
     selectedArtist === 'All' ? images : images.filter(img => img.artist === selectedArtist)
@@ -27,10 +28,10 @@ export default function GallerySection({
       <section className='py-20 md:py-32 bg-black'>
         <div className='container mx-auto px-4 max-w-8xl'>
           <h1 className='text-4xl sm:text-5xl md:text-6xl font-bold text-center mb-8'>
-            {galleryData.heading}
+            {heading}
           </h1>
           <p className='text-xl text-center text-gray-400 mb-12 max-w-3xl mx-auto'>
-            {galleryData.description}
+            {description}
           </p>
 
           <div className='flex flex-wrap justify-center gap-3 mb-12'>

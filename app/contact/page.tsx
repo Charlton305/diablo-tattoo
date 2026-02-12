@@ -1,15 +1,8 @@
-import Header from '@/components/shared/Header';
-import Footer from '@/components/shared/Footer';
-import ContactSection from '@/components/contact/ContactSection';
+import client from '@/tina/__generated__/client';
+import ContactPageClient from './contact-client';
 
-export default function ContactPage() {
-  return (
-    <>
-      <Header />
-      <main className="pt-20">
-        <ContactSection />
-      </main>
-      <Footer />
-    </>
-  );
+export default async function ContactPage() {
+  const contactResult = await client.queries.contact({ relativePath: 'contact.json' });
+  const siteResult = await client.queries.site({ relativePath: 'site.json' });
+  return <ContactPageClient contact={contactResult} site={siteResult} />;
 }

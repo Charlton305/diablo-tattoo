@@ -1,7 +1,11 @@
-import homepageData from '@/content/homepage.json'
 import Image from 'next/image'
+import type { HomepageHero } from '@/tina/__generated__/types'
 
-export default function HeroSection() {
+interface HeroSectionProps {
+  hero: HomepageHero | null | undefined
+}
+
+export default function HeroSection({ hero }: HeroSectionProps) {
   return (
     <section className='relative h-screen flex items-center justify-center overflow-hidden'>
       <div
@@ -22,10 +26,10 @@ export default function HeroSection() {
           className='mb-6 fade-in'
         />
         <p className='text-xl sm:text-2xl md:text-3xl mb-6 tracking-wide fade-in-delay-1'>
-          {homepageData.hero.subtitle}
+          {hero?.subtitle ?? ''}
         </p>
         <p className='text-xl sm:text-2xl md:text-4xl font-bold tracking-widest uppercase fade-in-delay-2'>
-          {homepageData.hero.location}
+          {hero?.location ?? ''}
         </p>
       </div>
     </section>

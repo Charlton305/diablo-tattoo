@@ -1,23 +1,9 @@
-import Header from '@/components/shared/Header';
-import Footer from '@/components/shared/Footer';
-import HeroSection from '@/components/home/HeroSection';
-import AboutSection from '@/components/home/AboutSection';
-import ArtistsSection from '@/components/home/ArtistsSection';
-import GallerySection from '@/components/home/GallerySection';
-import ContactSection from '@/components/home/ContactSection';
+import client from '@/tina/__generated__/client'
+import HomeClient from './home-client'
 
-export default function Home() {
-  return (
-    <>
-      <Header />
-      <main>
-        <HeroSection />
-        <AboutSection />
-        <ArtistsSection />
-        <GallerySection />
-        <ContactSection />
-      </main>
-      <Footer />
-    </>
-  );
+export default async function Home() {
+  const homepageResult = await client.queries.homepage({ relativePath: 'homepage.json' })
+  const artistsResult = await client.queries.artists({ relativePath: 'artists.json' })
+
+  return <HomeClient homepage={homepageResult} artists={artistsResult} />
 }

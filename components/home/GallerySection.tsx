@@ -1,24 +1,22 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import homepageData from '@/content/homepage.json'
-import { getShuffledImages } from '@/lib/getShufffledImages'
 
-const previewImages = getShuffledImages(6)
+interface GallerySectionProps {
+  heading: string
+  images: { src: string; alt: string }[]
+}
 
-export default function GallerySection() {
+export default function GallerySection({ heading, images }: GallerySectionProps) {
   return (
     <section className='py-20 md:py-32 bg-black'>
       <div className='container mx-auto px-4 max-w-8xl'>
         <h2 className='text-4xl sm:text-5xl md:text-6xl uppercase font-bold text-center mb-16'>
-          {homepageData.galleryPreview.heading}
+          {heading}
         </h2>
 
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12'>
-          {previewImages.map((image, index) => (
-            <div
-              key={index}
-              className='relative aspect-square overflow-hidden group'
-            >
+          {images.map((image, index) => (
+            <div key={index} className='relative aspect-square overflow-hidden group'>
               <Image
                 src={image.src}
                 alt={image.alt}

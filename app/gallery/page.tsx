@@ -1,20 +1,19 @@
-import Header from '@/components/shared/Header'
-import Footer from '@/components/shared/Footer'
-import GallerySection from '@/components/gallery/GallerySection'
+import client from '@/tina/__generated__/client'
+import GalleryPageClient from './gallery-client'
 import { getShuffledImages } from '@/lib/getShufffledImages'
-import ContactSection from '@/components/shared/ContactSection'
 
 const shuffledImages = getShuffledImages()
 
-export default function GalleryPage() {
+export default async function GalleryPage() {
+  const galleryResult = await client.queries.gallery({ relativePath: 'gallery.json' })
+  const artistsResult = await client.queries.artists({ relativePath: 'artists.json' })
+  const homepageResult = await client.queries.homepage({ relativePath: 'homepage.json' })
   return (
-    <>
-      <Header />
-      <main className='pt-20'>
-        <GallerySection images={shuffledImages} />
-        <ContactSection />
-      </main>
-      <Footer />
-    </>
+    <GalleryPageClient
+      gallery={galleryResult}
+      artists={artistsResult}
+      homepage={homepageResult}
+      images={shuffledImages}
+    />
   )
 }

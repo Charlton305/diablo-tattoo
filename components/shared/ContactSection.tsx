@@ -1,7 +1,16 @@
-import homepageData from '@/content/homepage.json';
 import ContactForm from '@/components/shared/ContactForm';
+import homepageData from '@/content/homepage.json';
 
-export default function ContactSection() {
+interface ContactSectionProps {
+  contact?: {
+    heading?: string | null;
+    description?: string | null;
+  } | null;
+}
+
+export default function ContactSection({ contact }: ContactSectionProps = {}) {
+  const heading = contact?.heading ?? homepageData.contact.heading;
+  const description = contact?.description ?? homepageData.contact.description;
 
   return (
     <section className="py-20 md:py-32 bg-zinc-950">
@@ -9,10 +18,10 @@ export default function ContactSection() {
         <div className="grid md:grid-cols-2 gap-12 md:gap-16">
           <div className="space-y-6">
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-8">
-              {homepageData.contact.heading}
+              {heading}
             </h2>
             <div className="space-y-4 text-lg leading-relaxed text-gray-300">
-              {homepageData.contact.description
+              {(description ?? '')
                 .split('\n\n')
                 .map((paragraph, index) => (
                   <p key={index}>{paragraph}</p>

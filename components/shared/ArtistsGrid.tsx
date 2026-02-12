@@ -1,11 +1,21 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import artistsContent from '@/content/artists.json'
 
-export default function ArtistsGrid() {
+interface Artist {
+  slug: string
+  image: string
+  imageAlt: string
+  name: string
+}
+
+interface ArtistsGridProps {
+  artists: Artist[]
+}
+
+export default function ArtistsGrid({ artists }: ArtistsGridProps) {
   return (
     <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4'>
-      {artistsContent.artists.map(artist => (
+      {artists.map(artist => (
         <Link key={artist.slug} href={`/artists/${artist.slug}`} className='group'>
           <div className='relative aspect-[3/4] overflow-hidden mb-4'>
             <Image

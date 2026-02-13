@@ -1,5 +1,7 @@
 import { defineConfig } from 'tinacms'
 import GalleryImagePicker from './fields/GalleryImagePicker'
+import { ImageUpload } from './fields/ImageUpload'
+import { GalleryManager } from './fields/GalleryManager'
 
 export default defineConfig({
   branch: '',
@@ -25,28 +27,27 @@ export default defineConfig({
       const style = document.createElement('style')
       style.id = STYLE_ID
       style.textContent = `
-  a[href="#/screens/media_manager"] {
-    display: none !important;
-  }
-  button[value="Media Manager"] {
-    display: none !important;
-  }
-  h4:has(+ ul > li > a[href="#/screens/media_manager"]) {
-    display: none !important;
-  }
-  h4:has(+ ul > li > button[value="Media Manager"]) {
-    display: none !important;
-  }
-  h4:has(+ button[value="Media Manager"]) {
-    display: none !important;
-  }
-`
+        a[href="#/screens/media_manager"] {
+          display: none !important;
+        }
+        button[value="Media Manager"] {
+          display: none !important;
+        }
+        h4:has(+ ul > li > a[href="#/screens/media_manager"]) {
+          display: none !important;
+        }
+        h4:has(+ ul > li > button[value="Media Manager"]) {
+          display: none !important;
+        }
+        h4:has(+ button[value="Media Manager"]) {
+          display: none !important;
+        }
+      `
       document.head.appendChild(style)
     }
 
     ensureStyle()
     new MutationObserver(ensureStyle).observe(document.head, { childList: true })
-    setInterval(ensureStyle, 500)
 
     return cms
   },
@@ -157,7 +158,7 @@ export default defineConfig({
             fields: [
               { type: 'string', name: 'name', label: 'Name', required: true },
               { type: 'string', name: 'slug', label: 'Slug', required: true },
-              { type: 'string', name: 'image', label: 'Profile Image' },
+              { type: 'image', name: 'image', label: 'Profile Image' },
               { type: 'string', name: 'imageAlt', label: 'Image Alt Text' },
               {
                 type: 'string',
@@ -171,9 +172,12 @@ export default defineConfig({
                 name: 'galleryImages',
                 label: 'Gallery Images',
                 list: true,
+                ui: {
+                  component: GalleryManager,
+                },
                 fields: [
-                  { type: 'string', name: 'src', label: 'Image Path' },
-                  { type: 'string', name: 'alt', label: 'Alt Text' },
+                  { type: 'string', name: 'src' },
+                  { type: 'string', name: 'alt' },
                 ],
               },
             ],

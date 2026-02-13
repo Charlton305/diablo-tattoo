@@ -19,7 +19,7 @@ export default function ArtistPageClient(props: ArtistPageClientProps) {
   const { slug } = props
   const { data } = useTina(props)
   const artist = (data.artists.artists ?? []).find(a => a?.slug === slug)
-
+  console.log('Gallery images after useTina:', artist?.galleryImages)
   if (!artist) {
     return null
   }
@@ -63,7 +63,7 @@ export default function ArtistPageClient(props: ArtistPageClientProps) {
           {galleryImages.length > 0 && (
             <div className='space-y-8'>
               <h2 className='text-3xl sm:text-4xl font-bold text-center'>{artist.name}&apos;s work</h2>
-              <ArtistGallery images={galleryImages} />
+              <ArtistGallery key={galleryImages.map(img => img.src).join(',')} images={galleryImages} />
             </div>
           )}
         </div>

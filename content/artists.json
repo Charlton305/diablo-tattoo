@@ -5,18 +5,18 @@
     {
       "name": "Ray",
       "slug": "ray",
-      "image": "/ray-profile-pic.jpg",
+      "image": "/images/artists/ray/ray-profile-pic.jpg",
       "imageAlt": "Ray, founder and tattoo artist at Diablo Tattoo",
       "bio": "Ray has been tattooing since the mid-90s, bringing decades of experience and a dedicated artistic vision to every piece. He opened Diablo Tattoo in 2009 and has worked conventions across the UK and overseas, having won several awards at major conventions and magazine features along the way.\n\nComfortable working in most styles, Ray specialises in free hand work, cover-ups, large-scale black and grey, and bold oriental work. Beyond tattooing, he also creates commissioned artwork in a range of mediums. When he's not in the studio, Ray plays drums in a touring band and enjoys time relaxing in the great outdoors.",
       "isArtist": true,
       "galleryImages": [
         {
-          "src": "/images/artists/ray/ray-underwater-marine-life-sleeve.jpg",
-          "alt": "Realistic colour underwater full sleeve with betta fish, dolphin, pufferfish and tropical marine life by Ray"
-        },
-        {
           "src": "/images/artists/ray/ray-classic-horror-monsters-sleeve.jpg",
           "alt": "Black and grey classic horror monsters full sleeve featuring Bride of Frankenstein, Nosferatu and Creature from the Black Lagoon by Ray"
+        },
+        {
+          "src": "/images/artists/ray/ray-underwater-marine-life-sleeve.jpg",
+          "alt": "Realistic colour underwater full sleeve with betta fish, dolphin, pufferfish and tropical marine life by Ray"
         },
         {
           "src": "/images/artists/ray/ray-coverup-wolf-over-celtic-knot.jpg",
@@ -135,7 +135,7 @@
     {
       "name": "Leo",
       "slug": "leo",
-      "image": "/leo-profile-pic.jpg",
+      "image": "/images/artists/leo/leo-profile-pic.jpg",
       "imageAlt": "Leonnie Brunt, tattoo artist at Diablo Tattoo",
       "bio": "Leonnie Brunt is a tattoo artist with over 15 years worth of experience whose creative roots run deep in Medway, Kent, where she was born and raised. She refined her artistic foundations during five years of study at the Kent Institute of Art and Design, an experience that shaped both her technical skill and her distinctive creative voice.\n\nA lifelong painter, Leonnie draws inspiration from the outdoors, developing a particular passion for outdoor and watercolour landscape painting. This love of fluid colour and natural forms translates seamlessly into her tattoo work, where she is known for her expressive and vibrant watercolour tattoos. Beyond her tattoo practice, Leonnie is also a surrealist painter working primarily in acrylic on canvas, exploring the subconscious and dreamlike imagery that fuels her imagination.\n\nLeonnie specialises in full-colour pieces, watercolour tattoos, cartoons, neo-traditional styles, and uniquely quirky designs. Her artistic versatility, paired with her thoughtful storytelling approach, makes her a sought-after artist for clients looking for both creativity and craftsmanship.\n\nWhen she's not in the studio, Leonnie enjoys staying active—often found at the gym or out bike riding, activities that keep her energised and continually inspired.",
       "isArtist": true,
@@ -197,7 +197,7 @@
     {
       "name": "Jin",
       "slug": "jin",
-      "image": "/jin-profile-pic.JPG",
+      "image": "/images/artists/jin/jin-profile-pic.JPG",
       "imageAlt": "Jin, tattoo artist at Diablo Tattoo",
       "bio": "Jin is a highly experienced tattoo artist with 25 years in the industry, known for his precision, creativity, and dedication to the craft. Having co-owned a successful tattoo studio in Essex, he has built a strong reputation for delivering exceptional work across a wide range of styles. While he is versatile in all forms of tattooing, Jin is particularly passionate about horror realism, where his mastery of detail and atmosphere truly stands out.\n\nBeyond tattooing, Jin is a multi-disciplinary artist who enjoys sculpting, painting, and drawing, constantly expanding his creative skillset. His artistic expertise has also led him to work on numerous special-effects projects, further showcasing his ability to bring imaginative concepts to life.\n\nA lover of dark aesthetics and cult classics, Jin's favourite film is House of 1000 Corpses. When he's not creating art, he can often be found enjoying his favourite meal—Wagyu steak.",
       "isArtist": true,
@@ -279,7 +279,7 @@
     {
       "name": "Matt",
       "slug": "matt",
-      "image": "/matt-profile-pic.jpg",
+      "image": "/images/artists/matt/matt-profile-pic.jpg",
       "imageAlt": "Matt, tattoo artist at Diablo Tattoo",
       "bio": "Matt is a tattoo artist with over 15 years of experience, bringing creativity and meaning to every piece he creates. Before tattooing, Matt spent 22 years as a graphic designer, building a strong foundation in design and detail.\n\nDuring the Covid years, Matt explored painting commissions, focusing on portraits and animal artwork that captured the unique personality of each subject.\n\nOutside of art, Matt has been playing drums since 1980. His band tours across Europe and the U.S.\n\nArt and music have always been at the heart of what he does, and he loves sharing that passion with others.",
       "isArtist": true,
@@ -457,10 +457,10 @@
     {
       "name": "Nathan",
       "slug": "nathan",
-      "image": "/nathan-profile-pic.png",
+      "image": "/images/artists/nathan/nathan-profile-pic.png",
       "imageAlt": "Nathan, Studio Manager at Diablo Tattoo",
-      "isArtist": false,
       "bio": "Nathan is the Studio Manager and primary point of contact at the tattoo studio, overseeing bookings for all resident artists and ensuring each client's experience runs smoothly from first enquiry to final appointment. With a strong understanding of the artists' styles and specialties, Nathan carefully matches clients with the right artist for their vision.\n\nHe also leads one-on-one consultations, helping clients refine their ideas, choose the right design and size, and feel confident in every step of the process before tattoo day. His approachable manner and attention to detail make him an essential part of creating a welcoming, professional studio environment.\n\nOutside the studio, Nathan spends his downtime playing bass in his bands, playing video games, exploring photography, and socialising—bringing the same creativity and connection into his work at the studio.",
+      "isArtist": false,
       "galleryImages": []
     }
   ]

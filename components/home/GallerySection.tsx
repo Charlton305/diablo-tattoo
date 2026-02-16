@@ -21,10 +21,10 @@ export default function GallerySection({ heading, images }: GallerySectionProps)
                 src={image.src}
                 alt={image.alt}
                 fill
-                className='object-cover transition-transform duration-500 group-hover:scale-110'
+                className='object-cover transition-transform duration-500 sm:group-hover:scale-110'
                 sizes='(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw'
               />
-              <div className='absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300' />
+              <div className='absolute inset-0 bg-black/50 opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300' />
             </div>
           ))}
         </div>

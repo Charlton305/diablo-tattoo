@@ -27,15 +27,15 @@ export default function ContactSection({ contactData, siteData }: ContactSection
           {contactData.description ?? ''}
         </p>
 
-        <div className='grid lg:grid-cols-2 gap-12 md:gap-16'>
-          <div className='lg:order-2'>
+        <div className='grid md:grid-cols-2 gap-12 md:gap-16'>
+          <div className='md:order-2'>
             <h2 className='text-2xl mb-6'>Send Us a Message</h2>
             <p className='text-gray-400 mb-6'>{contactData.formDescription ?? ''}</p>
 
             <ContactForm variant='darker' />
           </div>
 
-          <div className='space-y-8 lg:order-1'>
+          <div className='space-y-8 md:order-1'>
             <div>
               <h2 className='text-2xl mb-6'>Contact Details</h2>
 

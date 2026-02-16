@@ -33,7 +33,7 @@ export default function Header() {
           isScrolled ? 'bg-black/90 backdrop-blur-md' : 'bg-transparent'
         }`}
       >
-        <div className='mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='mx-auto px-4 sm:px-6 lg:px-8 max-w-8xl'>
           <div className='grid grid-cols-2 lg:grid-cols-3 items-center h-20'>
             <div className='flex justify-start'>
               <Link

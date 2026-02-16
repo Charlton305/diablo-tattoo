@@ -45,7 +45,7 @@ export default function FAQSection({ data }: FAQSectionProps) {
                 onClick={() => toggleAccordion(index)}
                 className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-zinc-900 transition-colors"
               >
-                <span className="text-lg font-semibold pr-4">
+                <span className="text-lg pr-4">
                   {item.question ?? ''}
                 </span>
                 <ChevronDown

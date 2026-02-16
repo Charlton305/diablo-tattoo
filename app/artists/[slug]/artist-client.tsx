@@ -51,7 +51,7 @@ export default function ArtistPageClient(props: ArtistPageClientProps) {
             </div>
 
             <div className='space-y-6'>
-              <h1 className='text-4xl sm:text-4xL uppercase md:text-5xl'>{artist.name}</h1>
+              <h1 className='text-4xl sm:text-4xL font-semibold uppercase md:text-5xl'>{artist.name}</h1>
               <p className='text-lg leading-relaxed text-gray-300 whitespace-pre-line'>
                 {artist.bio}
               </p>

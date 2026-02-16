@@ -23,14 +23,14 @@ export default function GuideSection({ data }: GuideSectionProps) {
 
         <div className='space-y-16'>
           <div className='border border-white/20 bg-zinc-900/50 p-8 sm:p-10'>
-            <h2 className='text-3xl sm:text-4xl font-bold mb-6'>{beforeSession?.heading ?? ''}</h2>
+            <h2 className='text-3xl sm:text-4xl mb-6'>{beforeSession?.heading ?? ''}</h2>
             <p className='text-gray-300 mb-10 leading-relaxed text-lg'>
               {beforeSession?.intro ?? ''}
             </p>
             <div className='space-y-6'>
               {(beforeSession?.items ?? []).filter(Boolean).map((item, index) => (
                 <div key={index} className='py-1'>
-                  <h3 className='text-xl font-semibold mb-3'>{item!.title ?? ''}</h3>
+                  <h3 className='text-xl mb-3'>{item!.title ?? ''}</h3>
                   <p className='text-gray-300 leading-relaxed'>{item!.content ?? ''}</p>
                 </div>
               ))}
@@ -38,7 +38,7 @@ export default function GuideSection({ data }: GuideSectionProps) {
           </div>
 
           <div className='border border-white/20 bg-zinc-900/50 p-8 sm:p-10'>
-            <h2 className='text-3xl sm:text-4xl font-bold mb-6'>{aftercare?.heading ?? ''}</h2>
+            <h2 className='text-3xl sm:text-4xl mb-6'>{aftercare?.heading ?? ''}</h2>
             <div className='bg-red-900/20 border-l-4 border-accent p-6 mb-10'>
               <div className='flex'>
                 <AlertCircle className='h-6 w-6 text-accent flex-shrink-0 mt-0.5' />
@@ -47,7 +47,7 @@ export default function GuideSection({ data }: GuideSectionProps) {
             </div>
 
             <div className='mb-10'>
-              <h3 className='text-2xl font-semibold mb-6'>Aftercare Steps</h3>
+              <h3 className='text-2xl mb-6'>Aftercare Steps</h3>
               <div className='space-y-4'>
                 {(aftercare?.instructions ?? []).filter(Boolean).map((instruction, index) => (
                   <p
@@ -64,7 +64,7 @@ export default function GuideSection({ data }: GuideSectionProps) {
               <div className='border border-white/20 p-6'>
                 <div className='flex items-center mb-6'>
                   <XCircle className='h-6 w-6 text-accent mr-2' />
-                  <h3 className='text-xl font-semibold'>DO NOT</h3>
+                  <h3 className='text-xl'>DO NOT</h3>
                 </div>
                 <ul className='space-y-3'>
                   {(aftercare?.donts ?? []).filter(Boolean).map((dont, index) => (
@@ -81,7 +81,7 @@ export default function GuideSection({ data }: GuideSectionProps) {
               <div className='border border-white/20 p-6'>
                 <div className='flex items-center mb-6'>
                   <CheckCircle className='h-6 w-6 text-green-500 mr-2' />
-                  <h3 className='text-xl font-semibold'>DO</h3>
+                  <h3 className='text-xl'>DO</h3>
                 </div>
                 <ul className='space-y-3'>
                   {(aftercare?.dos ?? []).filter(Boolean).map((doItem, index) => (

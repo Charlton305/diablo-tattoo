@@ -27,7 +27,7 @@ export default function ArtistsGrid({ artists }: ArtistsGridProps) {
             />
             <div className='absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300' />
           </div>
-          <h3 className='text-2xl font-bold uppercase transition-colors'>
+          <h3 className='text-2xl font-semibold uppercase transition-colors'>
             <span className='relative inline-block'>
               {artist.name}
               <span className='absolute left-0 bottom-0 h-[2px] w-full bg-white origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300' />

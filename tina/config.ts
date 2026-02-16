@@ -382,6 +382,7 @@ export default defineConfig({
         fields: [
           { type: 'string', name: 'email', label: 'Email' },
           { type: 'string', name: 'phone', label: 'Phone' },
+          { type: 'string', name: 'address', label: 'Address' },
           {
             type: 'object',
             name: 'socialLinks',

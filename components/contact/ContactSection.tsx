@@ -16,6 +16,7 @@ interface ContactSectionProps {
 }
 
 export default function ContactSection({ contactData, siteData }: ContactSectionProps) {
+  console.log(siteData)
   return (
     <section className='py-20 md:py-32 bg-black'>
       <div className='container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl'>
@@ -28,7 +29,7 @@ export default function ContactSection({ contactData, siteData }: ContactSection
 
         <div className='grid lg:grid-cols-2 gap-12 md:gap-16'>
           <div className='lg:order-2'>
-            <h2 className='text-2xl font-bold mb-6'>Send Us a Message</h2>
+            <h2 className='text-2xl mb-6'>Send Us a Message</h2>
             <p className='text-gray-400 mb-6'>{contactData.formDescription ?? ''}</p>
 
             <ContactForm variant='darker' />
@@ -36,13 +37,13 @@ export default function ContactSection({ contactData, siteData }: ContactSection
 
           <div className='space-y-8 lg:order-1'>
             <div>
-              <h2 className='text-2xl font-bold mb-6'>Contact Details</h2>
+              <h2 className='text-2xl mb-6'>Contact Details</h2>
 
               <div className='space-y-4'>
                 <div className='flex items-start space-x-4'>
                   <MapPin className='w-6 h-6 text-accent flex-shrink-0 mt-1' />
                   <div>
-                    <p className='font-semibold mb-1'>Address</p>
+                    <p className=' mb-1'>Address</p>
                     <p className='text-gray-400'>{siteData.address ?? ''}</p>
                   </div>
                 </div>
@@ -50,7 +51,7 @@ export default function ContactSection({ contactData, siteData }: ContactSection
                 <div className='flex items-start space-x-4'>
                   <Phone className='w-6 h-6 text-accent flex-shrink-0 mt-1' />
                   <div>
-                    <p className='font-semibold mb-1'>Phone</p>
+                    <p className=' mb-1'>Phone</p>
                     <a
                       href={`tel:${siteData.phone ?? ''}`}
                       className='text-gray-400 hover:text-white transition-colors'
@@ -63,7 +64,7 @@ export default function ContactSection({ contactData, siteData }: ContactSection
                 <div className='flex items-start space-x-4'>
                   <Mail className='w-6 h-6 text-accent flex-shrink-0 mt-1' />
                   <div>
-                    <p className='font-semibold mb-1'>Email</p>
+                    <p className=' mb-1'>Email</p>
                     <a
                       href={`mailto:${siteData.email ?? ''}`}
                       className='text-gray-400 hover:text-white transition-colors'
@@ -76,7 +77,7 @@ export default function ContactSection({ contactData, siteData }: ContactSection
             </div>
 
             <div>
-              <h2 className='text-2xl font-bold mb-6 flex items-center'>Opening Hours</h2>
+              <h2 className='text-2xl mb-6 flex items-center'>Opening Hours</h2>
               <div className='space-y-2'>
                 {['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'].map(
                   day => (

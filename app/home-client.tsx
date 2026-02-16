@@ -6,7 +6,7 @@ import HeroSection from '@/components/home/HeroSection'
 import AboutSection from '@/components/home/AboutSection'
 import ArtistsSection from '@/components/home/ArtistsSection'
 import GallerySection from '@/components/home/GallerySection'
-import ContactSection from '@/components/home/ContactSection'
+import ContactSection from '@/components/shared/ContactSection'
 
 interface HomeClientProps {
   homepage: {

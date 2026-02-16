@@ -18,13 +18,15 @@ export default function HeroSection({ hero }: HeroSectionProps) {
       />
 
       <div className='relative z-10 text-center px-4 mt-[80px]'>
-        <Image
-          src='/diablo-tattoo-logo.webp'
-          alt='Diablo Tattoo Logo'
-          width={764}
-          height={295}
-          className='mb-6 fade-in'
-        />
+        <h1>
+          <Image
+            src='/diablo-tattoo-logo.webp'
+            alt='Diablo Tattoo - Tattoo Studio in Rochester, Kent'
+            width={764}
+            height={295}
+            className='mb-6 fade-in'
+          />
+        </h1>
         <p className='text-xl sm:text-2xl md:text-3xl mb-6 tracking-wide fade-in-delay-1'>
           {hero?.subtitle ?? ''}
         </p>

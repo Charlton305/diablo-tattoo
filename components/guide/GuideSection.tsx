@@ -14,7 +14,7 @@ export default function GuideSection({ data }: GuideSectionProps) {
   const aftercare = data.aftercare
 
   return (
-    <section className='py-20 md:py-32 bg-black'>
+    <section className='py-20 bg-black'>
       <div className='container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl'>
         <div className='text-center mb-16'>
           <h1 className='text-4xl sm:text-5xl md:text-6xl mb-6'>{heading}</h1>

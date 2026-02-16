@@ -25,7 +25,7 @@ export default function ArtistsPageClient(props: ArtistsPageClientProps) {
 
   return (
     <div className="pt-20">
-      <section className="py-20 md:py-32 bg-black">
+      <section className="py-20 bg-black">
         <div className="container mx-auto px-4 max-w-8xl">
           <h1 className="text-4xl sm:text-5xl md:text-6xl text-center mb-8">
             {artistsContent.heading}

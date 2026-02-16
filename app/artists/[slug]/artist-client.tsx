@@ -34,14 +34,14 @@ export default function ArtistPageClient(props: ArtistPageClientProps) {
     }))
 
   return (
-    <div className='pt-20'>
-      <section className='py-20 md:py-32 bg-black'>
+    <div className='pt-12'>
+      <section className='py-20 bg-black'>
         <div className='container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl'>
           <Link
             href='/artists'
-            className='inline-flex items-center text-gray-400 hover:text-white transition-colors mb-8'
+            className='inline-flex items-center text-lg text-gray-400 hover:text-white group transition-colors mb-8'
           >
-            <ChevronLeft className='w-4 h-4 mr-1' />
+            <ChevronLeft className='w-4 h-4 mr-1 group-hover:mr-2 transition-all' />
             Back to Artists
           </Link>
 

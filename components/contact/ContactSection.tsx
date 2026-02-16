@@ -18,7 +18,7 @@ interface ContactSectionProps {
 export default function ContactSection({ contactData, siteData }: ContactSectionProps) {
   console.log(siteData)
   return (
-    <section className='py-20 md:py-32 bg-black'>
+    <section className='py-20 bg-black'>
       <div className='container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl'>
         <h1 className='text-4xl sm:text-5xl md:text-6xl text-center mb-8'>
           {contactData.heading ?? ''}

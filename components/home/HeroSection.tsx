@@ -7,7 +7,7 @@ interface HeroSectionProps {
 
 export default function HeroSection({ hero }: HeroSectionProps) {
   return (
-    <section className='relative h-screen flex items-center justify-center overflow-hidden'>
+    <section className='relative lg:h-screen flex items-center justify-center overflow-hidden'>
       <div
         className='absolute inset-0 bg-cover bg-center bg-no-repeat'
         style={{
@@ -17,7 +17,7 @@ export default function HeroSection({ hero }: HeroSectionProps) {
         aria-label='Interior of Diablo Tattoo studio'
       />
 
-      <div className='relative z-10 text-center px-4 mt-[80px]'>
+      <div className='relative z-10 text-center px-4 my-[80px]'>
         <h1>
           <Image
             src='/diablo-tattoo-logo.webp'

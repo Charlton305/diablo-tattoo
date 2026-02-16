@@ -10,7 +10,7 @@ export default function GallerySection({ heading, images }: GallerySectionProps)
   return (
     <section className='py-20 md:py-32 bg-black'>
       <div className='container mx-auto px-4 max-w-8xl'>
-        <h2 className='text-4xl sm:text-5xl md:text-6xl uppercase font-bold text-center mb-16'>
+        <h2 className='text-4xl sm:text-5xl md:text-6xl uppercase text-center mb-16'>
           {heading}
         </h2>
 

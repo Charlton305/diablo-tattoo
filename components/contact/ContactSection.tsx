@@ -11,7 +11,7 @@ interface ContactSectionProps {
     address?: string | null
     phone?: string | null
     email?: string | null
-    openingHours?: ({ day?: string | null; hours?: string | null } | null)[] | null
+    openingHours?: Record<string, string | null> | null
   }
 }
 
@@ -19,7 +19,7 @@ export default function ContactSection({ contactData, siteData }: ContactSection
   return (
     <section className='py-20 md:py-32 bg-black'>
       <div className='container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl'>
-        <h1 className='text-4xl sm:text-5xl md:text-6xl font-bold text-center mb-8'>
+        <h1 className='text-4xl sm:text-5xl md:text-6xl text-center mb-8'>
           {contactData.heading ?? ''}
         </h1>
         <p className='text-xl text-center text-gray-400 mb-16 max-w-3xl mx-auto'>

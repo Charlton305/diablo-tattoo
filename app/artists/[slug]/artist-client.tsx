@@ -51,7 +51,7 @@ export default function ArtistPageClient(props: ArtistPageClientProps) {
             </div>
 
             <div className='space-y-6'>
-              <h1 className='text-4xl sm:text-4xL uppercase md:text-5xl font-bold'>{artist.name}</h1>
+              <h1 className='text-4xl sm:text-4xL uppercase md:text-5xl'>{artist.name}</h1>
               <p className='text-lg leading-relaxed text-gray-300 whitespace-pre-line'>
                 {artist.bio}
               </p>
@@ -62,7 +62,7 @@ export default function ArtistPageClient(props: ArtistPageClientProps) {
 
           {galleryImages.length > 0 && (
             <div className='space-y-8'>
-              <h2 className='text-3xl sm:text-4xl font-bold text-center'>{artist.name}&apos;s work</h2>
+              <h2 className='text-3xl sm:text-4xl text-center'>{artist.name}&apos;s work</h2>
               <ArtistGallery key={galleryImages.map(img => img.src).join(',')} images={galleryImages} />
             </div>
           )}

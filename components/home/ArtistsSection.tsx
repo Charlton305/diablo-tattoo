@@ -16,7 +16,7 @@ export default function ArtistsSection({ heading, artists }: ArtistsSectionProps
   return (
     <section className="py-20 md:py-32 bg-zinc-950">
       <div className="container mx-auto px-4 max-w-8xl">
-        <h2 className="text-4xl sm:text-5xl uppercase md:text-6xl font-bold text-center mb-16">
+        <h2 className="text-4xl sm:text-5xl uppercase md:text-6xl text-center mb-16">
           {heading}
         </h2>
 

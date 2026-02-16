@@ -12,7 +12,7 @@ export default function ContactSection({ contact }: ContactSectionProps) {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
         <div className="grid md:grid-cols-2 gap-12 md:gap-16">
           <div className="space-y-6">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-8">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl mb-8">
               {contact?.heading ?? ''}
             </h2>
             <div className="space-y-4 text-lg leading-relaxed text-gray-300">

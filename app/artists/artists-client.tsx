@@ -27,7 +27,7 @@ export default function ArtistsPageClient(props: ArtistsPageClientProps) {
     <div className="pt-20">
       <section className="py-20 md:py-32 bg-black">
         <div className="container mx-auto px-4 max-w-8xl">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-center mb-8">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl text-center mb-8">
             {artistsContent.heading}
           </h1>
           <p className="text-xl text-center text-gray-400 mb-16 max-w-3xl mx-auto">

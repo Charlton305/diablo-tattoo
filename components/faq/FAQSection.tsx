@@ -28,7 +28,7 @@ export default function FAQSection({ data }: FAQSectionProps) {
   return (
     <section className="py-20 md:py-32 bg-black">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-center mb-8">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl text-center mb-8">
           {data?.heading ?? ''}
         </h1>
         <p className="text-xl text-center text-gray-400 mb-16">

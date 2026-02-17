@@ -4,9 +4,9 @@ import { ImageUpload } from './fields/ImageUpload'
 import { GalleryManager } from './fields/GalleryManager'
 
 export default defineConfig({
-  branch: '',
-  clientId: '',
-  token: '',
+  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
+  token: process.env.TINA_TOKEN,
+  branch: process.env.NEXT_PUBLIC_TINA_BRANCH || 'main',
   build: {
     outputFolder: 'admin',
     publicFolder: 'public',

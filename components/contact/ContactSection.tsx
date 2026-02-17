@@ -1,38 +1,41 @@
 import { MapPin, Phone, Mail, Clock } from 'lucide-react'
+import { tinaField } from 'tinacms/dist/react'
+import type { ContactQuery, SiteQuery } from '@/tina/__generated__/types'
 import ContactForm from '@/components/shared/ContactForm'
 
 interface ContactSectionProps {
-  contactData: {
-    heading?: string | null
-    description?: string | null
-    formDescription?: string | null
-  }
-  siteData: {
-    address?: string | null
-    phone?: string | null
-    email?: string | null
-    openingHours?: Record<string, string | null> | null
-  }
+  contactData: ContactQuery['contact']
+  siteData: SiteQuery['site']
 }
 
 export default function ContactSection({ contactData, siteData }: ContactSectionProps) {
-  console.log(siteData)
   return (
     <section className='py-20 bg-black'>
       <div className='container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl'>
-        <h1 className='text-4xl sm:text-5xl md:text-6xl text-center mb-8'>
+        <h1
+          className='text-4xl sm:text-5xl md:text-6xl text-center mb-8'
+          data-tina-field={contactData ? tinaField(contactData, 'heading') : undefined}
+        >
           {contactData.heading ?? ''}
         </h1>
-        <p className='text-xl text-center text-gray-400 mb-16 max-w-3xl mx-auto'>
+        <p
+          className='text-xl text-center text-gray-400 mb-16 max-w-3xl mx-auto'
+          data-tina-field={contactData ? tinaField(contactData, 'description') : undefined}
+        >
           {contactData.description ?? ''}
         </p>
 
         <div className='grid md:grid-cols-2 gap-12 md:gap-16'>
           <div className='md:order-2'>
             <h2 className='text-2xl mb-6'>Send Us a Message</h2>
-            <p className='text-gray-400 mb-6'>{contactData.formDescription ?? ''}</p>
+            <p
+              className='text-gray-400 mb-6'
+              data-tina-field={contactData ? tinaField(contactData, 'formDescription') : undefined}
+            >
+              {contactData.formDescription ?? ''}
+            </p>
 
-            <ContactForm variant='darker' />
+            <ContactForm />
           </div>
 
           <div className='space-y-8 md:order-1'>
@@ -42,7 +45,7 @@ export default function ContactSection({ contactData, siteData }: ContactSection
               <div className='space-y-4'>
                 <div className='flex items-start space-x-4'>
                   <MapPin className='w-6 h-6 text-accent flex-shrink-0 mt-1' />
-                  <div>
+                  <div data-tina-field={siteData ? tinaField(siteData, 'address') : undefined}>
                     <p className=' mb-1'>Address</p>
                     <p className='text-gray-400'>{siteData.address ?? ''}</p>
                   </div>
@@ -50,7 +53,7 @@ export default function ContactSection({ contactData, siteData }: ContactSection
 
                 <div className='flex items-start space-x-4'>
                   <Phone className='w-6 h-6 text-accent flex-shrink-0 mt-1' />
-                  <div>
+                  <div data-tina-field={siteData ? tinaField(siteData, 'phone') : undefined}>
                     <p className=' mb-1'>Phone</p>
                     <a
                       href={`tel:${siteData.phone ?? ''}`}
@@ -63,7 +66,7 @@ export default function ContactSection({ contactData, siteData }: ContactSection
 
                 <div className='flex items-start space-x-4'>
                   <Mail className='w-6 h-6 text-accent flex-shrink-0 mt-1' />
-                  <div>
+                  <div data-tina-field={siteData ? tinaField(siteData, 'email') : undefined}>
                     <p className=' mb-1'>Email</p>
                     <a
                       href={`mailto:${siteData.email ?? ''}`}
@@ -79,14 +82,18 @@ export default function ContactSection({ contactData, siteData }: ContactSection
             <div>
               <h2 className='text-2xl mb-6 flex items-center'>Opening Hours</h2>
               <div className='space-y-2'>
-                {['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'].map(
+                {(['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'] as const).map(
                   day => (
-                    <div key={day} className='flex justify-between py-2 border-b border-white/10'>
+                    <div
+                      key={day}
+                      className='flex justify-between py-2 border-b border-white/10'
+                      data-tina-field={siteData.openingHours ? tinaField(siteData.openingHours, day) : undefined}
+                    >
                       <span className='font-semibold'>
                         {day.charAt(0).toUpperCase() + day.slice(1)}
                       </span>
                       <span className='text-gray-400'>
-                        {siteData.openingHours?.[day as keyof typeof siteData.openingHours] ?? ''}
+                        {siteData.openingHours?.[day] ?? ''}
                       </span>
                     </div>
                   ),

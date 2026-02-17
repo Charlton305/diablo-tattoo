@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { tinaField } from 'tinacms/dist/react'
 import type { HomepageHero } from '@/tina/__generated__/types'
 
 interface HeroSectionProps {
@@ -27,10 +28,16 @@ export default function HeroSection({ hero }: HeroSectionProps) {
             className='mb-6 fade-in'
           />
         </h1>
-        <p className='text-xl sm:text-2xl md:text-3xl mb-6 tracking-wide fade-in-delay-1'>
+        <p
+          className='text-xl sm:text-2xl md:text-3xl mb-6 tracking-wide fade-in-delay-1'
+          data-tina-field={hero ? tinaField(hero, 'subtitle') : undefined}
+        >
           {hero?.subtitle ?? ''}
         </p>
-        <p className='text-xl sm:text-2xl md:text-4xl font-bold tracking-widest uppercase fade-in-delay-2'>
+        <p
+          className='text-xl sm:text-2xl md:text-4xl font-bold tracking-widest uppercase fade-in-delay-2'
+          data-tina-field={hero ? tinaField(hero, 'location') : undefined}
+        >
           {hero?.location ?? ''}
         </p>
       </div>

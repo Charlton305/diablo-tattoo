@@ -1,22 +1,37 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { tinaField } from 'tinacms/dist/react'
+import type { HomepageGalleryPreview } from '@/tina/__generated__/types'
 
 interface GallerySectionProps {
-  heading: string
+  galleryPreviewData: HomepageGalleryPreview | null | undefined
   images: { src: string; alt: string }[]
 }
 
-export default function GallerySection({ heading, images }: GallerySectionProps) {
+export default function GallerySection({ galleryPreviewData, images }: GallerySectionProps) {
   return (
     <section className='py-20 md:py-32 bg-black'>
       <div className='container mx-auto px-4 max-w-8xl'>
-        <h2 className='text-4xl sm:text-5xl md:text-6xl uppercase text-center mb-16'>
-          {heading}
+        <h2
+          className='text-4xl sm:text-5xl md:text-6xl uppercase text-center mb-16'
+          data-tina-field={
+            galleryPreviewData ? tinaField(galleryPreviewData, 'heading') : undefined
+          }
+        >
+          {galleryPreviewData?.heading ?? ''}
         </h2>
 
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12'>
           {images.map((image, index) => (
-            <div key={index} className='relative aspect-square overflow-hidden group'>
+            <div
+              key={index}
+              className='relative aspect-square overflow-hidden group'
+              data-tina-field={
+                galleryPreviewData
+                  ? tinaField(galleryPreviewData, `image${index + 1}` as any)
+                  : undefined
+              }
+            >
               <Image
                 src={image.src}
                 alt={image.alt}

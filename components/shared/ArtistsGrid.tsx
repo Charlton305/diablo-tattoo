@@ -18,13 +18,9 @@ export default function ArtistsGrid({ artists }: ArtistsGridProps) {
       {artists.map(artist => (
         <Link key={artist.slug} href={`/artists/${artist.slug}`} className='group'>
           <div className='relative aspect-[3/4] overflow-hidden mb-4'>
-            <Image
-              src={artist.image}
-              alt={artist.imageAlt}
-              fill
-              className='object-cover transition-transform duration-300 group-hover:scale-110'
-              sizes='(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 20vw'
-            />
+            {artist.image && (
+              <Image src={artist.image} alt={artist.imageAlt ?? ''} fill className='object-cover' />
+            )}
             <div className='absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300' />
           </div>
           <h3 className='text-2xl font-semibold uppercase transition-colors'>

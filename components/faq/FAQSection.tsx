@@ -2,20 +2,11 @@
 
 import { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
-
-interface FAQItem {
-  question: string | null;
-  answer: string | null;
-}
-
-interface FAQData {
-  heading?: string | null;
-  description?: string | null;
-  items?: FAQItem[] | null;
-}
+import { tinaField } from 'tinacms/dist/react';
+import type { FaqQuery } from '@/tina/__generated__/types';
 
 interface FAQSectionProps {
-  data: FAQData;
+  data: FaqQuery['faq'];
 }
 
 export default function FAQSection({ data }: FAQSectionProps) {
@@ -28,10 +19,16 @@ export default function FAQSection({ data }: FAQSectionProps) {
   return (
     <section className="py-20 bg-black">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl text-center mb-8">
+        <h1
+          className="text-4xl sm:text-5xl md:text-6xl text-center mb-8"
+          data-tina-field={data ? tinaField(data, 'heading') : undefined}
+        >
           {data?.heading ?? ''}
         </h1>
-        <p className="text-xl text-center text-gray-400 mb-16">
+        <p
+          className="text-xl text-center text-gray-400 mb-16"
+          data-tina-field={data ? tinaField(data, 'description') : undefined}
+        >
           {data?.description ?? ''}
         </p>
 
@@ -45,7 +42,10 @@ export default function FAQSection({ data }: FAQSectionProps) {
                 onClick={() => toggleAccordion(index)}
                 className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-zinc-900 transition-colors"
               >
-                <span className="text-lg pr-4">
+                <span
+                  className="text-lg pr-4"
+                  data-tina-field={item ? tinaField(item, 'question') : undefined}
+                >
                   {item.question ?? ''}
                 </span>
                 <ChevronDown
@@ -60,7 +60,10 @@ export default function FAQSection({ data }: FAQSectionProps) {
                   openIndex === index ? 'max-h-96' : 'max-h-0'
                 }`}
               >
-                <div className="px-6 py-5 text-gray-300 leading-relaxed">
+                <div
+                  className="px-6 py-5 text-gray-300 leading-relaxed"
+                  data-tina-field={item ? tinaField(item, 'answer') : undefined}
+                >
                   {item.answer ?? ''}
                 </div>
               </div>

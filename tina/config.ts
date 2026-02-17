@@ -111,20 +111,6 @@ export default defineConfig({
               })),
             ],
           },
-          {
-            type: 'object',
-            name: 'contact',
-            label: 'Contact Section',
-            fields: [
-              { type: 'string', name: 'heading', label: 'Heading' },
-              {
-                type: 'string',
-                name: 'description',
-                label: 'Description',
-                ui: { component: 'textarea' },
-              },
-            ],
-          },
         ],
       },
       {
@@ -367,6 +353,30 @@ export default defineConfig({
             name: 'formDescription',
             label: 'Form Description',
             ui: { component: 'textarea' },
+          },
+        ],
+      },
+      {
+        name: 'contactSection',
+        label: 'Contact Section',
+        path: 'content',
+        format: 'json',
+        match: {
+          include: 'contact-section',
+        },
+        fields: [
+          {
+            type: 'string',
+            name: 'heading',
+            label: 'Heading',
+          },
+          {
+            type: 'string',
+            name: 'description',
+            label: 'Description',
+            ui: {
+              component: 'textarea',
+            },
           },
         ],
       },

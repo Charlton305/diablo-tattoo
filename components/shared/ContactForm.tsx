@@ -6,7 +6,7 @@ interface ContactFormProps {
   variant?: 'dark' | 'darker';
 }
 
-export default function ContactForm({ variant = 'dark' }: ContactFormProps) {
+export default function ContactForm({ variant = 'darker' }: ContactFormProps) {
   const [fileName, setFileName] = useState<string>('');
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {

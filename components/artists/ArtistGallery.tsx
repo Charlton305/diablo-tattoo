@@ -1,6 +1,7 @@
 'use client'
 
 import { useCallback, useEffect, useState } from 'react'
+import Image from 'next/image'
 import useEmblaCarousel from 'embla-carousel-react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 
@@ -16,17 +17,12 @@ interface ArtistGalleryProps {
 export default function ArtistGallery({ images }: ArtistGalleryProps) {
   const [selectedIndex, setSelectedIndex] = useState(0)
 
-  // Main image carousel
   const [emblaMainRef, emblaMainApi] = useEmblaCarousel({ loop: true })
-
-  // Thumbnail carousel — dragFree allows smooth free-scroll,
-  // containScroll keeps thumbs from overscrolling past edges
   const [emblaThumbsRef, emblaThumbsApi] = useEmblaCarousel({
     containScroll: 'keepSnaps',
     dragFree: true,
   })
 
-  // When main carousel changes slide, sync thumbnails
   const onSelect = useCallback(() => {
     if (!emblaMainApi || !emblaThumbsApi) return
     const index = emblaMainApi.selectedScrollSnap()
@@ -50,12 +46,16 @@ export default function ArtistGallery({ images }: ArtistGalleryProps) {
         <div className='overflow-hidden' ref={emblaMainRef}>
           <div className='flex items-center'>
             {images.map((image, index) => (
-              <div key={index} className='flex-[0_0_100%] min-w-0 flex justify-center'>
-                <img
+              <div
+                key={index}
+                className='flex-[0_0_100%] min-w-0 flex justify-center relative h-[70vh]'
+              >
+                <Image
                   src={image.src}
                   alt={image.alt}
-                  className='max-h-[70vh] max-w-full object-contain'
-                  loading={index === 0 ? 'eager' : 'lazy'}
+                  fill
+                  className='object-contain'
+                  sizes='100vw'
                 />
               </div>
             ))}
@@ -101,17 +101,16 @@ export default function ArtistGallery({ images }: ArtistGalleryProps) {
                 key={index}
                 onClick={() => emblaMainApi?.scrollTo(index)}
                 className={`flex-[0_0_calc(33.333%-6px)] lg:flex-[0_0_calc(20%-6.4px)] min-w-0 relative aspect-square overflow-hidden transition-all ${
-                  index === selectedIndex
-                    ? 'opacity-100'
-                    : 'opacity-50 hover:opacity-80'
+                  index === selectedIndex ? 'opacity-100' : 'opacity-50 hover:opacity-80'
                 }`}
                 aria-label={`View image ${index + 1}`}
               >
-                <img
+                <Image
                   src={image.src}
                   alt={image.alt}
-                  className='absolute inset-0 w-full h-full object-cover'
-                  loading='lazy'
+                  fill
+                  className='object-cover'
+                  sizes='(max-width: 1024px) 33vw, 20vw'
                 />
               </button>
             ))}

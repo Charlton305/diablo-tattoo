@@ -47,30 +47,30 @@ export default function HomeClient({ homepage, artists }: HomeClientProps) {
   })
 
   const galleryPreview = homepageContent.galleryPreview
-const previewImages = [
-  galleryPreview?.image1,
-  galleryPreview?.image2,
-  galleryPreview?.image3,
-  galleryPreview?.image4,
-  galleryPreview?.image5,
-  galleryPreview?.image6,
-]
-  .filter((src): src is string => typeof src === 'string' && src !== '')
-  .map(src => ({
-    src,
-    alt: altTextMap.get(src) ?? 'Tattoo by Diablo Tattoo',
-  }))
+  const previewImages = [
+    galleryPreview?.image1,
+    galleryPreview?.image2,
+    galleryPreview?.image3,
+    galleryPreview?.image4,
+    galleryPreview?.image5,
+
+    galleryPreview?.image6,
+  ]
+    .filter((src): src is string => typeof src === 'string' && src !== '')
+    .map(src => ({
+      src,
+      alt: altTextMap.get(src) ?? 'Tattoo by Diablo Tattoo',
+    }))
 
   return (
     <>
       <HeroSection hero={homepageContent.hero} />
       <AboutSection about={homepageContent.about} />
-      <ArtistsSection heading={homepageContent.artists?.heading ?? ''} artists={artistsList} />
+      <ArtistsSection artistsData={homepageContent.artists} artists={artistsList} />
       <GallerySection
-        heading={homepageContent.galleryPreview?.heading ?? ''}
+        galleryPreviewData={homepageContent.galleryPreview}
         images={previewImages}
       />
-      <ContactSection contact={homepageContent.contact} />
     </>
   )
 }

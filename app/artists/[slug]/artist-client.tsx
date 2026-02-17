@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { ChevronLeft } from 'lucide-react'
-import { useTina } from 'tinacms/dist/react'
+import { useTina, tinaField } from 'tinacms/dist/react'
 import type { ArtistsQuery } from '@/tina/__generated__/types'
 import ArtistGallery from '@/components/artists/ArtistGallery'
 import LinkButton from '@/components/shared/LinkButton'
@@ -19,7 +19,7 @@ export default function ArtistPageClient(props: ArtistPageClientProps) {
   const { slug } = props
   const { data } = useTina(props)
   const artist = (data.artists.artists ?? []).find(a => a?.slug === slug)
-  console.log('Gallery images after useTina:', artist?.galleryImages)
+  
   if (!artist) {
     return null
   }
@@ -46,13 +46,31 @@ export default function ArtistPageClient(props: ArtistPageClientProps) {
           </Link>
 
           <div className='grid md:grid-cols-2 gap-12 md:gap-16 mb-16'>
-            <div className='relative aspect-[3/4] overflow-hidden'>
-              <Image src={artist.image ?? ''} alt={artist.imageAlt ?? ''} fill className='object-cover' />
+            <div
+              className='relative aspect-[3/4] overflow-hidden'
+              data-tina-field={artist ? tinaField(artist, 'image') : undefined}
+            >
+              {artist.image && (
+                <Image
+                  src={artist.image}
+                  alt={artist.imageAlt ?? ''}
+                  fill
+                  className='object-cover'
+                />
+              )}
             </div>
 
             <div className='space-y-6'>
-              <h1 className='text-4xl sm:text-4xL font-semibold uppercase md:text-5xl'>{artist.name}</h1>
-              <p className='text-lg leading-relaxed text-gray-300 whitespace-pre-line'>
+              <h1
+                className='text-4xl sm:text-4xL font-semibold uppercase md:text-5xl'
+                data-tina-field={artist ? tinaField(artist, 'name') : undefined}
+              >
+                {artist.name}
+              </h1>
+              <p
+                className='text-lg leading-relaxed text-gray-300 whitespace-pre-line'
+                data-tina-field={artist ? tinaField(artist, 'bio') : undefined}
+              >
                 {artist.bio}
               </p>
 
@@ -63,7 +81,10 @@ export default function ArtistPageClient(props: ArtistPageClientProps) {
           {galleryImages.length > 0 && (
             <div className='space-y-8'>
               <h2 className='text-3xl sm:text-4xl text-center'>{artist.name}&apos;s work</h2>
-              <ArtistGallery key={galleryImages.map(img => img.src).join(',')} images={galleryImages} />
+              <ArtistGallery
+                key={galleryImages.map(img => img.src).join(',')}
+                images={galleryImages}
+              />
             </div>
           )}
         </div>

@@ -52,6 +52,20 @@ export const GalleryManager = ({ input, field, form }: any) => {
     setDeletingIndex(null)
   }
 
+  const handleMoveUp = (index: number) => {
+    if (index === 0) return
+    const updated = [...images]
+    ;[updated[index - 1], updated[index]] = [updated[index], updated[index - 1]]
+    input.onChange(updated)
+  }
+
+  const handleMoveDown = (index: number) => {
+    if (index === images.length - 1) return
+    const updated = [...images]
+    ;[updated[index], updated[index + 1]] = [updated[index + 1], updated[index]]
+    input.onChange(updated)
+  }
+
   const handleViewOpen = (index: number) => {
     setViewAlt(images[index].alt || '')
     setViewingIndex(index)
@@ -266,6 +280,52 @@ export const GalleryManager = ({ input, field, form }: any) => {
         {images.map((img, i) => (
           <div key={i}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 8, width: '100%' }}>
+              {/* Reorder buttons */}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 2, flexShrink: 0 }}>
+                <button
+                  type='button'
+                  onClick={() => handleMoveUp(i)}
+                  disabled={i === 0}
+                  title='Move up'
+                  style={{
+                    background: 'none',
+                    border: '1px solid #ddd',
+                    borderRadius: 3,
+                    cursor: i === 0 ? 'default' : 'pointer',
+                    padding: 2,
+                    opacity: i === 0 ? 0.3 : 1,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                  }}
+                >
+                  <svg width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='#666' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'>
+                    <polyline points='18 15 12 9 6 15' />
+                  </svg>
+                </button>
+                <button
+                  type='button'
+                  onClick={() => handleMoveDown(i)}
+                  disabled={i === images.length - 1}
+                  title='Move down'
+                  style={{
+                    background: 'none',
+                    border: '1px solid #ddd',
+                    borderRadius: 3,
+                    cursor: i === images.length - 1 ? 'default' : 'pointer',
+                    padding: 2,
+                    opacity: i === images.length - 1 ? 0.3 : 1,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                  }}
+                >
+                  <svg width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='#666' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'>
+                    <polyline points='6 9 12 15 18 9' />
+                  </svg>
+                </button>
+              </div>
+
               <button
                 type='button'
                 onClick={() => handleViewOpen(i)}
@@ -345,7 +405,7 @@ export const GalleryManager = ({ input, field, form }: any) => {
               <div
                 style={{
                   marginTop: 8,
-                  marginLeft: 72,
+                  marginLeft: 94,
                   padding: 8,
                   background: '#fef2f2',
                   border: '1px solid #fecaca',

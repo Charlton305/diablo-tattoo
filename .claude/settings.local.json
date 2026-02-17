@@ -25,7 +25,8 @@
       "Bash(findstr:*)",
       "Bash(taskkill:*)",
       "Bash(MSYS_NO_PATHCONV=1 taskkill:*)",
-      "Bash(npx tsc:*)"
+      "Bash(npx tsc:*)",
+      "mcp__ide__getDiagnostics"
     ]
   }
 }

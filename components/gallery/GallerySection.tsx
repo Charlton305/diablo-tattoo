@@ -3,16 +3,16 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import { X } from 'lucide-react'
+import { tinaField } from 'tinacms/dist/react'
+import type { GalleryQuery } from '@/tina/__generated__/types'
 
 export default function GallerySection({
   images,
-  heading,
-  description,
+  galleryData,
   artistNames,
 }: {
   images: { src: string; alt: string; artist: string }[]
-  heading: string
-  description: string
+  galleryData: GalleryQuery['gallery']
   artistNames: string[]
 }) {
   const [selectedArtist, setSelectedArtist] = useState('All')
@@ -27,11 +27,17 @@ export default function GallerySection({
     <>
       <section className='py-20 bg-black'>
         <div className='container mx-auto px-4 max-w-8xl'>
-          <h1 className='text-4xl sm:text-5xl md:text-6xl text-center mb-8'>
-            {heading}
+          <h1
+            className='text-4xl sm:text-5xl md:text-6xl text-center mb-8'
+            data-tina-field={galleryData ? tinaField(galleryData, 'heading') : undefined}
+          >
+            {galleryData?.heading ?? ''}
           </h1>
-          <p className='text-xl text-center text-gray-400 mb-12 max-w-3xl mx-auto'>
-            {description}
+          <p
+            className='text-xl text-center text-gray-400 mb-12 max-w-3xl mx-auto'
+            data-tina-field={galleryData ? tinaField(galleryData, 'description') : undefined}
+          >
+            {galleryData?.description ?? ''}
           </p>
 
           <div className='flex flex-wrap justify-center gap-3 mb-12'>

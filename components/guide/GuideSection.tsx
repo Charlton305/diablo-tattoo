@@ -1,6 +1,7 @@
 'use client'
 
 import { AlertCircle, CheckCircle, XCircle } from 'lucide-react'
+import { tinaField } from 'tinacms/dist/react'
 import type { GuideQuery } from '@/tina/__generated__/types'
 
 interface GuideSectionProps {
@@ -17,32 +18,70 @@ export default function GuideSection({ data }: GuideSectionProps) {
     <section className='py-20 bg-black'>
       <div className='container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl'>
         <div className='text-center mb-16'>
-          <h1 className='text-4xl sm:text-5xl md:text-6xl mb-6'>{heading}</h1>
-          <p className='text-xl text-gray-400 max-w-2xl mx-auto'>{description}</p>
+          <h1
+            className='text-4xl sm:text-5xl md:text-6xl mb-6'
+            data-tina-field={data ? tinaField(data, 'heading') : undefined}
+          >
+            {heading}
+          </h1>
+          <p
+            className='text-xl text-gray-400 max-w-2xl mx-auto'
+            data-tina-field={data ? tinaField(data, 'description') : undefined}
+          >
+            {description}
+          </p>
         </div>
 
         <div className='space-y-16'>
           <div className='border border-white/20 bg-zinc-900/50 p-8 sm:p-10'>
-            <h2 className='text-3xl sm:text-4xl mb-6'>{beforeSession?.heading ?? ''}</h2>
-            <p className='text-gray-300 mb-10 leading-relaxed text-lg'>
+            <h2
+              className='text-3xl sm:text-4xl mb-6'
+              data-tina-field={beforeSession ? tinaField(beforeSession, 'heading') : undefined}
+            >
+              {beforeSession?.heading ?? ''}
+            </h2>
+            <p
+              className='text-gray-300 mb-10 leading-relaxed text-lg'
+              data-tina-field={beforeSession ? tinaField(beforeSession, 'intro') : undefined}
+            >
               {beforeSession?.intro ?? ''}
             </p>
             <div className='space-y-6'>
               {(beforeSession?.items ?? []).filter(Boolean).map((item, index) => (
                 <div key={index} className='py-1'>
-                  <h3 className='text-xl mb-3'>{item!.title ?? ''}</h3>
-                  <p className='text-gray-300 leading-relaxed'>{item!.content ?? ''}</p>
+                  <h3
+                    className='text-xl mb-3'
+                    data-tina-field={item ? tinaField(item, 'title') : undefined}
+                  >
+                    {item!.title ?? ''}
+                  </h3>
+                  <p
+                    className='text-gray-300 leading-relaxed'
+                    data-tina-field={item ? tinaField(item, 'content') : undefined}
+                  >
+                    {item!.content ?? ''}
+                  </p>
                 </div>
               ))}
             </div>
           </div>
 
           <div className='border border-white/20 bg-zinc-900/50 p-8 sm:p-10'>
-            <h2 className='text-3xl sm:text-4xl mb-6'>{aftercare?.heading ?? ''}</h2>
+            <h2
+              className='text-3xl sm:text-4xl mb-6'
+              data-tina-field={aftercare ? tinaField(aftercare, 'heading') : undefined}
+            >
+              {aftercare?.heading ?? ''}
+            </h2>
             <div className='bg-red-900/20 border-l-4 border-accent p-6 mb-10'>
               <div className='flex'>
                 <AlertCircle className='h-6 w-6 text-accent flex-shrink-0 mt-0.5' />
-                <p className='ml-4 text-gray-300 leading-relaxed'>{aftercare?.intro ?? ''}</p>
+                <p
+                  className='ml-4 text-gray-300 leading-relaxed'
+                  data-tina-field={aftercare ? tinaField(aftercare, 'intro') : undefined}
+                >
+                  {aftercare?.intro ?? ''}
+                </p>
               </div>
             </div>
 
@@ -53,6 +92,7 @@ export default function GuideSection({ data }: GuideSectionProps) {
                   <p
                     key={index}
                     className='text-gray-300 leading-relaxed border-l-2 border-white/20 pl-4 py-1'
+                    data-tina-field={instruction ? tinaField(instruction, 'content') : undefined}
                   >
                     {instruction!.content ?? ''}
                   </p>
@@ -99,7 +139,12 @@ export default function GuideSection({ data }: GuideSectionProps) {
             </div>
 
             <div className='bg-zinc-800/50 border-l-4 border-white/30 p-6'>
-              <p className='text-gray-300 leading-relaxed'>{aftercare?.footer ?? ''}</p>
+              <p
+                className='text-gray-300 leading-relaxed'
+                data-tina-field={aftercare ? tinaField(aftercare, 'footer') : undefined}
+              >
+                {aftercare?.footer ?? ''}
+              </p>
             </div>
           </div>
         </div>

@@ -24,10 +24,21 @@ export const GalleryManager = ({ input, field, form }: any) => {
 
     try {
       const slug = getArtistSlug()
-      const [uploaded] = await cms.media.persist([
-        { directory: slug ? `artists/${slug}` : 'artists', file },
-      ])
-      setNewSrc(uploaded.src || '')
+      const directory = slug ? `artists/${slug}` : 'artists'
+      const expectedPath = `/${directory}/${file.name}`
+
+      // Check if file already exists in media
+      const existingMedia = await cms.media.list({ directory })
+      const exists = existingMedia.items.some((item: any) => item.filename === file.name)
+
+      if (exists) {
+        // File already exists, just use its path
+        setNewSrc(expectedPath)
+      } else {
+        // Upload new file
+        const [uploaded] = await cms.media.persist([{ directory, file }])
+        setNewSrc(uploaded.src || '')
+      }
     } catch (err) {
       console.error('Upload failed:', err)
     }
@@ -73,9 +84,7 @@ export const GalleryManager = ({ input, field, form }: any) => {
 
   const handleViewSave = () => {
     if (viewingIndex === null) return
-    const updated = images.map((img, i) =>
-      i === viewingIndex ? { ...img, alt: viewAlt } : img
-    )
+    const updated = images.map((img, i) => (i === viewingIndex ? { ...img, alt: viewAlt } : img))
     input.onChange(updated)
     setViewingIndex(null)
     setViewAlt('')
@@ -299,7 +308,16 @@ export const GalleryManager = ({ input, field, form }: any) => {
                     justifyContent: 'center',
                   }}
                 >
-                  <svg width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='#666' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'>
+                  <svg
+                    width='14'
+                    height='14'
+                    viewBox='0 0 24 24'
+                    fill='none'
+                    stroke='#666'
+                    strokeWidth='2'
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                  >
                     <polyline points='18 15 12 9 6 15' />
                   </svg>
                 </button>
@@ -320,7 +338,16 @@ export const GalleryManager = ({ input, field, form }: any) => {
                     justifyContent: 'center',
                   }}
                 >
-                  <svg width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='#666' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'>
+                  <svg
+                    width='14'
+                    height='14'
+                    viewBox='0 0 24 24'
+                    fill='none'
+                    stroke='#666'
+                    strokeWidth='2'
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                  >
                     <polyline points='6 9 12 15 18 9' />
                   </svg>
                 </button>

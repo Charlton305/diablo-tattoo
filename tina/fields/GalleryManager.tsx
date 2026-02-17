@@ -19,24 +19,37 @@ export const GalleryManager = ({ input, field, form }: any) => {
   }
 
   const handleUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
-  const file = e.target.files?.[0]
-  if (!file) return
+    const file = e.target.files?.[0]
+    if (!file) return
 
-  const slug = getArtistSlug()
-  const directory = slug ? `artists/${slug}` : 'artists'
+    const slug = getArtistSlug()
+    const directory = slug ? `artists/${slug}` : 'artists'
+    const expectedPath = `/images/${directory}/${file.name}`
 
-  try {
-    const [uploaded] = await cms.media.persist([{ directory, file }])
-    setNewSrc(uploaded.src || '')
-  } catch (err: any) {
-    // If upload fails because file exists, use expected path
-    if (err?.message?.includes('already exists')) {
-      setNewSrc(`/${directory}/${file.name}`)
-    } else {
-      console.error('Upload failed:', err)
+    // Check if image already exists by trying to load it
+    try {
+      const response = await fetch(expectedPath, { method: 'HEAD' })
+      if (response.ok) {
+        // File exists, just use the path
+        setNewSrc(expectedPath)
+        return
+      }
+    } catch {
+      // Fetch failed, file probably doesn't exist, continue to upload
+    }
+
+    // Upload new file
+    try {
+      const [uploaded] = await cms.media.persist([{ directory, file }])
+      setNewSrc(uploaded.src || '')
+    } catch (err: any) {
+      if (err?.message?.includes('already exists')) {
+        setNewSrc(expectedPath)
+      } else {
+        console.error('Upload failed:', err)
+      }
     }
   }
-}
 
   const handleSave = () => {
     if (!newSrc) return

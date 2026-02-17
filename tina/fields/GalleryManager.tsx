@@ -26,22 +26,28 @@ export const GalleryManager = ({ input, field, form }: any) => {
     const directory = slug ? `artists/${slug}` : 'artists'
     const expectedPath = `/images/${directory}/${file.name}`
 
-    // Check if image already exists by trying to load it
+    // Check if image already exists in Tina's media store
     try {
-      const response = await fetch(expectedPath, { method: 'HEAD' })
-      if (response.ok) {
-        // File exists, just use the path
+      const mediaList = await cms.media.store.list({ directory })
+      console.log('Media store list:', mediaList)
+      const exists = mediaList.items?.some(
+        (item: any) => item.filename?.toLowerCase() === file.name.toLowerCase(),
+      )
+
+      if (exists) {
+        // File already in Tina's media store, just use the path
         setNewSrc(expectedPath)
         return
       }
-    } catch {
-      // Fetch failed, file probably doesn't exist, continue to upload
+    } catch (err) {
+      console.log('Could not check media store, attempting upload:', err)
+      // Continue to upload attempt
     }
 
     // Upload new file
     try {
       const [uploaded] = await cms.media.persist([{ directory, file }])
-      setNewSrc(uploaded.src || '')
+      setNewSrc(uploaded.src || expectedPath)
     } catch (err: any) {
       if (err?.message?.includes('already exists')) {
         setNewSrc(expectedPath)

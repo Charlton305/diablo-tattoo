@@ -19,30 +19,24 @@ export const GalleryManager = ({ input, field, form }: any) => {
   }
 
   const handleUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0]
-    if (!file) return
+  const file = e.target.files?.[0]
+  if (!file) return
 
-    try {
-      const slug = getArtistSlug()
-      const directory = slug ? `artists/${slug}` : 'artists'
-      const expectedPath = `/${directory}/${file.name}`
+  const slug = getArtistSlug()
+  const directory = slug ? `artists/${slug}` : 'artists'
 
-      // Check if file already exists in media
-      const existingMedia = await cms.media.list({ directory })
-      const exists = existingMedia.items.some((item: any) => item.filename === file.name)
-
-      if (exists) {
-        // File already exists, just use its path
-        setNewSrc(expectedPath)
-      } else {
-        // Upload new file
-        const [uploaded] = await cms.media.persist([{ directory, file }])
-        setNewSrc(uploaded.src || '')
-      }
-    } catch (err) {
+  try {
+    const [uploaded] = await cms.media.persist([{ directory, file }])
+    setNewSrc(uploaded.src || '')
+  } catch (err: any) {
+    // If upload fails because file exists, use expected path
+    if (err?.message?.includes('already exists')) {
+      setNewSrc(`/${directory}/${file.name}`)
+    } else {
       console.error('Upload failed:', err)
     }
   }
+}
 
   const handleSave = () => {
     if (!newSrc) return

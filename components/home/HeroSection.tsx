@@ -18,7 +18,7 @@ export default function HeroSection({ hero }: HeroSectionProps) {
         aria-label='Interior of Diablo Tattoo studio'
       />
 
-      <div className='relative z-10 text-center px-4 my-[80px]'>
+      <div className='relative z-10 text-center px-4 pt-[80px] mb-[40px] lg:my-[80px]'>
         <h1>
           <Image
             src='/diablo-tattoo-logo.webp'

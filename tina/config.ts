@@ -114,60 +114,61 @@ export default defineConfig({
         ],
       },
       {
-        name: 'artists',
+        name: 'artist',
         label: 'Artists',
+        path: 'content/artists',
+        format: 'json',
+        ui: {
+          filename: {
+            readonly: true,
+            slugify: (values) => values?.slug || 'new-artist',
+          },
+        },
+        fields: [
+          { type: 'string', name: 'name', label: 'Name', required: true },
+          { type: 'string', name: 'slug', label: 'Slug', required: true },
+          { type: 'boolean', name: 'isArtist', label: 'Is Artist' },
+          { type: 'number', name: 'order', label: 'Display Order' },
+          { type: 'image', name: 'image', label: 'Profile Image' },
+          { type: 'string', name: 'imageAlt', label: 'Profile Image Alt' },
+          { type: 'string', name: 'bio', label: 'Bio', ui: { component: 'textarea' } },
+          {
+            type: 'object',
+            name: 'galleryImages',
+            label: 'Gallery Images',
+            list: true,
+            ui: {
+              itemProps: (item) => ({ label: item?.alt || 'Gallery Image' }),
+            },
+            fields: [
+              {
+                type: 'image',
+                name: 'src',
+                label: 'Image',
+                uploadDir: (formValues) => `artists/${formValues.slug}`,
+              },
+              { type: 'string', name: 'alt', label: 'Alt Text' },
+            ],
+          },
+        ],
+      },
+      {
+        name: 'artistsPage',
+        label: 'Artists Page',
         path: 'content',
         format: 'json',
-        match: { include: 'artists' },
         ui: {
-          allowedActions: { create: false, delete: false },
-          router: () => '/artists',
+          allowedActions: {
+            create: false,
+            delete: false,
+          },
+        },
+        match: {
+          include: 'artists',
         },
         fields: [
           { type: 'string', name: 'heading', label: 'Heading' },
-          {
-            type: 'string',
-            name: 'description',
-            label: 'Description',
-            ui: { component: 'textarea' },
-          },
-          {
-            type: 'object',
-            name: 'artists',
-            label: 'Artists',
-            list: true,
-            ui: {
-              itemProps: (item: Record<string, string>) => ({
-                label: item?.name || 'New Artist',
-              }),
-            },
-            fields: [
-              { type: 'string', name: 'name', label: 'Name', required: true },
-              { type: 'string', name: 'slug', label: 'Slug', required: true },
-              { type: 'image', name: 'image', label: 'Profile Image' },
-              { type: 'string', name: 'imageAlt', label: 'Image Alt Text' },
-              {
-                type: 'string',
-                name: 'bio',
-                label: 'Bio',
-                ui: { component: 'textarea' },
-              },
-              { type: 'boolean', name: 'isArtist', label: 'Is Artist' },
-              {
-                type: 'object',
-                name: 'galleryImages',
-                label: 'Gallery Images',
-                list: true,
-                ui: {
-                  component: GalleryManager,
-                },
-                fields: [
-                  { type: 'string', name: 'src' },
-                  { type: 'string', name: 'alt' },
-                ],
-              },
-            ],
-          },
+          { type: 'string', name: 'description', label: 'Description', ui: { component: 'textarea' } },
         ],
       },
       {

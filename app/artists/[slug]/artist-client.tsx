@@ -4,25 +4,16 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { ChevronLeft } from 'lucide-react'
 import { useTina, tinaField } from 'tinacms/dist/react'
-import type { ArtistsQuery } from '@/tina/__generated__/types'
 import ArtistGallery from '@/components/artists/ArtistGallery'
 import LinkButton from '@/components/shared/LinkButton'
 
 interface ArtistPageClientProps {
-  data: ArtistsQuery
-  query: string
-  variables: { relativePath: string }
-  slug: string
+  artist: Awaited<ReturnType<typeof import('@/tina/__generated__/client').default.queries.artist>>
 }
 
-export default function ArtistPageClient(props: ArtistPageClientProps) {
-  const { slug } = props
-  const { data } = useTina(props)
-  const artist = (data.artists.artists ?? []).find(a => a?.slug === slug)
-  
-  if (!artist) {
-    return null
-  }
+export default function ArtistPageClient({ artist: artistProps }: ArtistPageClientProps) {
+  const { data } = useTina(artistProps)
+  const artist = data.artist
 
   const buttonText = artist.isArtist ? `Book with ${artist.name}` : 'Get in touch'
 
@@ -48,7 +39,7 @@ export default function ArtistPageClient(props: ArtistPageClientProps) {
           <div className='grid md:grid-cols-2 gap-12 md:gap-16 mb-16'>
             <div
               className='relative aspect-[3/4] overflow-hidden'
-              data-tina-field={artist ? tinaField(artist, 'image') : undefined}
+              data-tina-field={tinaField(artist, 'image')}
             >
               {artist.image && (
                 <Image
@@ -63,13 +54,13 @@ export default function ArtistPageClient(props: ArtistPageClientProps) {
             <div className='space-y-6'>
               <h1
                 className='text-4xl sm:text-4xL font-semibold uppercase md:text-5xl'
-                data-tina-field={artist ? tinaField(artist, 'name') : undefined}
+                data-tina-field={tinaField(artist, 'name')}
               >
                 {artist.name}
               </h1>
               <p
                 className='text-lg leading-relaxed text-gray-300 whitespace-pre-line'
-                data-tina-field={artist ? tinaField(artist, 'bio') : undefined}
+                data-tina-field={tinaField(artist, 'bio')}
               >
                 {artist.bio}
               </p>

@@ -4,7 +4,7 @@ import ContactSection from '@/components/shared/ContactSection'
 
 export default async function Home() {
   const homepageResult = await client.queries.homepage({ relativePath: 'homepage.json' })
-  const artistsResult = await client.queries.artists({ relativePath: 'artists.json' })
+  const artistsResult = await client.queries.artistConnection()
 
   return (
     <>

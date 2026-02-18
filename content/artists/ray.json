@@ -1,0 +1,127 @@
+{
+  "name": "Ray",
+  "slug": "ray",
+  "isArtist": true,
+  "order": 5,
+  "image": "/images/artists/ray/ray-profile-pic.jpg",
+  "imageAlt": "Ray, founder and tattoo artist at Diablo Tattoo",
+  "bio": "Ray has been tattooing since the mid-90s, bringing decades of experience and a dedicated artistic vision to every piece. He opened Diablo Tattoo in 2009 and has worked conventions across the UK and overseas, having won several awards at major conventions and magazine features along the way.\n\nComfortable working in most styles, Ray specialises in free hand work, cover-ups, large-scale black and grey, and bold oriental work. Beyond tattooing, he also creates commissioned artwork in a range of mediums. When he's not in the studio, Ray plays drums in a touring band and enjoys time relaxing in the great outdoors.",
+  "galleryImages": [
+    {
+      "src": "/images/artists/ray/ray-classic-horror-monsters-sleeve.jpg",
+      "alt": "Black and grey classic horror monsters full sleeve featuring Bride of Frankenstein, Nosferatu and Creature from the Black Lagoon by Ray"
+    },
+    {
+      "src": "/images/artists/ray/ray-coverup-wolf-over-celtic-knot.jpg",
+      "alt": "Snarling wolf cover-up over faded Celtic knot showing before, stencil and finished piece by Ray"
+    },
+    {
+      "src": "/images/artists/ray/ray-underwater-marine-life-sleeve.jpg",
+      "alt": "Realistic colour underwater full sleeve with betta fish, dolphin, pufferfish and tropical marine life by Ray"
+    },
+    {
+      "src": "/images/artists/ray/ray-ornamental-filigree-hand.jpg",
+      "alt": "Black and grey ornamental filigree hand tattoo by Ray"
+    },
+    {
+      "src": "/images/artists/ray/ray-coverup-xenomorph-alien.jpg",
+      "alt": "Xenomorph Alien in blue tones cover-up over script text on torso by Ray"
+    },
+    {
+      "src": "/images/artists/ray/ray-jungle-wildlife-leg-sleeve.jpg",
+      "alt": "Realistic colour jungle wildlife full leg sleeve with chimp, jaguar, parrot, toucan, giraffe and chameleon by Ray"
+    },
+    {
+      "src": "/images/artists/ray/ray-guanyin-dragon-backpiece.jpg",
+      "alt": "Black and grey Guanyin and dragon full back piece in oriental style by Ray"
+    },
+    {
+      "src": "/images/artists/ray/ray-coverup-cthulhu-skull-colour.jpg",
+      "alt": "Colour Cthulhu skull cover-up over faded eagle showing before, stencil and finished piece by Ray"
+    },
+    {
+      "src": "/images/artists/ray/ray-budgies-branch-realistic.jpg",
+      "alt": "Realistic pair of budgerigars on a branch with green leaves by Ray"
+    },
+    {
+      "src": "/images/artists/ray/ray-japanese-sleeve-hannya-cherry-blossom.jpg",
+      "alt": "Japanese style full sleeve with hannya masks, cherry blossom and snake in black and grey with red accents by Ray"
+    },
+    {
+      "src": "/images/artists/ray/ray-coverup-evil-unicorn.jpg",
+      "alt": "Dark evil unicorn with red mane and glowing eyes cover-up over faded dragon by Ray"
+    },
+    {
+      "src": "/images/artists/ray/ray-bear-tiger-lion-backpiece.jpg",
+      "alt": "Neo-traditional bear, tiger and lion battle full back piece with chrysanthemum in colour by Ray"
+    },
+    {
+      "src": "/images/artists/ray/ray-realistic-old-man-portrait.jpg",
+      "alt": "Black and grey realistic portrait of an elderly man on upper arm by Ray"
+    },
+    {
+      "src": "/images/artists/ray/ray-coverup-pirate-skull-portrait.jpg",
+      "alt": "Pirate skull with wings and female portrait cover-up over England bulldog by Ray"
+    },
+    {
+      "src": "/images/artists/ray/ray-cartoon-pop-culture-sleeve.jpg",
+      "alt": "Colour cartoon full sleeve featuring Tom and Jerry, Teenage Mutant Ninja Turtles, Earthworm Jim and ThunderCats by Ray"
+    },
+    {
+      "src": "/images/artists/ray/ray-great-war-newspaper-torso.jpg",
+      "alt": "Black and grey WW1 Armistice newspaper front page torso piece with skull and roses by Ray"
+    },
+    {
+      "src": "/images/artists/ray/ray-dog-portrait-ornate-frame.jpg",
+      "alt": "Realistic dog portrait in suit and glasses in ornate gold frame on thigh by Ray"
+    },
+    {
+      "src": "/images/artists/ray/ray-horror-sleeve-pinhead-jason.jpg",
+      "alt": "Black and grey horror full sleeve featuring Pinhead, Jason Voorhees and Pennywise by Ray"
+    },
+    {
+      "src": "/images/artists/ray/ray-coverup-poseidon-nautical-sleeve.jpg",
+      "alt": "Poseidon and galleon ship nautical full sleeve cover-up over tribal piece by Ray"
+    },
+    {
+      "src": "/images/artists/ray/ray-fire-ice-dragons-backpiece.jpg",
+      "alt": "Fire dragon vs ice dragon full back piece in colour realism by Ray"
+    },
+    {
+      "src": "/images/artists/ray/ray-pokemon-pikachu-squirtle.jpg",
+      "alt": "Colour Pikachu and Squirtle calf piece with pixel art background by Ray"
+    },
+    {
+      "src": "/images/artists/ray/ray-demon-dogs-chest-torso.jpg",
+      "alt": "Black and grey demon face with pit bulls and Roman numeral dates full torso piece by Ray"
+    },
+    {
+      "src": "/images/artists/ray/ray-coverup-horror-face-truck.jpg",
+      "alt": "Dark horror face with truck cover-up over skull and flags back piece by Ray"
+    },
+    {
+      "src": "/images/artists/ray/ray-samurai-dog-japanese-sleeve.jpg",
+      "alt": "Japanese-inspired colour full sleeve with samurai dog, snake, frog and Eye of Horus by Ray"
+    },
+    {
+      "src": "/images/artists/ray/ray-skull-face-morph.jpg",
+      "alt": "Black and grey skull and female face morph tattoo by Ray"
+    },
+    {
+      "src": "/images/artists/ray/ray-coverup-owl-roses.jpg",
+      "alt": "Realistic black and grey owl with roses cover-up over line work owl by Ray"
+    },
+    {
+      "src": "/images/artists/ray/ray-floral-botanical-sleeve.jpg",
+      "alt": "Colour botanical full sleeve with hibiscus, lotus, daffodils and tree frog by Ray"
+    },
+    {
+      "src": "/images/artists/ray/ray-religious-renaissance-backpiece.jpg",
+      "alt": "Black and grey Renaissance-style religious scene full back piece with angels and crucifixion by Ray"
+    },
+    {
+      "src": "/images/artists/ray/ray-coverup-horror-pentagram-face.jpg",
+      "alt": "Horror face with pentagram and blood cover-up over Day of the Dead design by Ray"
+    }
+  ]
+}

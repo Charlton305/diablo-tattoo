@@ -2,8 +2,8 @@ import client from '@/tina/__generated__/client'
 import ArtistsPageClient from './artists-client'
 
 export default async function ArtistsPage() {
-  const artistsResult = await client.queries.artists({ relativePath: 'artists.json' })
-  const homepageResult = await client.queries.homepage({ relativePath: 'homepage.json' })
+  const pageResult = await client.queries.artistsPage({ relativePath: 'artists.json' })
+  const artistsResult = await client.queries.artistConnection()
 
-  return <ArtistsPageClient artists={artistsResult} homepage={homepageResult} />
+  return <ArtistsPageClient page={pageResult} artists={artistsResult} />
 }

@@ -1,18 +1,18 @@
 import client from '@/tina/__generated__/client'
 import ArtistPageClient from './artist-client'
-import artistsContent from '@/content/artists.json'
 
 export const dynamicParams = false
 
 export async function generateStaticParams() {
-  return artistsContent.artists.map(artist => ({
-    slug: artist.slug,
-  }))
+  const artistsResult = await client.queries.artistConnection()
+  const edges = artistsResult.data.artistConnection.edges ?? []
+
+  return edges.flatMap(edge => (edge?.node?.slug ? [{ slug: edge.node.slug }] : []))
 }
 
-export default async function ArtistPage({ params }: { params: { slug: string } }) {
+export default async function ArtistPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
-  const result = await client.queries.artists({ relativePath: 'artists.json' })
+  const artistResult = await client.queries.artist({ relativePath: `${slug}.json` })
 
-  return <ArtistPageClient {...result} slug={slug} />
+  return <ArtistPageClient artist={artistResult} />
 }

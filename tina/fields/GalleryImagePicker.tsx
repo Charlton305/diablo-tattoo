@@ -10,21 +10,43 @@ const GalleryImagePicker = wrapFieldsWithMeta(({ input }) => {
   const [images, setImages] = useState<{ src: string; alt: string; artist: string }[]>([])
 
   const loadImages = async () => {
-    // Fetch artists data from Tina's GraphQL endpoint
-    const res = await fetch('http://localhost:4001/graphql', {
+    const clientId = process.env.NEXT_PUBLIC_TINA_CLIENT_ID
+    const branch = process.env.NEXT_PUBLIC_TINA_BRANCH || 'main'
+
+    const apiUrl = clientId
+      ? `https://content.tinajs.io/content/${clientId}/github/${branch}`
+      : 'http://localhost:4001/graphql'
+
+    const res = await fetch(apiUrl, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        query: `{ artists(relativePath: "artists.json") { artists { name galleryImages { src alt } } } }`,
+        query: `{
+        artistConnection {
+          edges {
+            node {
+              name
+              galleryImages {
+                src
+                alt
+              }
+            }
+          }
+        }
+      }`,
       }),
     })
     const { data } = await res.json()
     const allImages: { src: string; alt: string; artist: string }[] = []
-    data.artists.artists?.forEach((artist: any) => {
+
+    data.artistConnection.edges?.forEach((edge: any) => {
+      const artist = edge?.node
+      if (!artist) return
       artist.galleryImages?.forEach((img: any) => {
         if (img?.src) allImages.push({ src: img.src, alt: img.alt || '', artist: artist.name })
       })
     })
+
     setImages(allImages)
     setIsOpen(true)
   }

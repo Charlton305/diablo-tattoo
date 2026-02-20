@@ -13,10 +13,8 @@ interface ArtistPageClientProps {
 
 function resolveImageSrc(src: string): string {
   if (!src) return ''
-  if (src.startsWith('https://assets.tina.io/')) {
-    const parts = src.split('/')
-    return '/images/' + parts.slice(4).join('/')
-  }
+  const imagesIndex = src.indexOf('/images')
+  if (imagesIndex !== -1) return src.slice(imagesIndex)
   return src
 }
 
@@ -27,14 +25,14 @@ export default function ArtistPageClient({ artist: artistProps }: ArtistPageClie
   const buttonText = artist.isArtist ? `Book with ${artist.name}` : 'Get in touch'
 
   const { edit } = useEditState()
-  console.log(edit)
+
   const galleryImages = (artist.galleryImages ?? [])
     .filter((img): img is NonNullable<typeof img> => img != null)
     .map(img => ({
       src: edit ? img.src ?? '' : resolveImageSrc(img.src ?? ''),
       alt: img.alt ?? '',
     }))
-  console.log(galleryImages)
+
   return (
     <div className='pt-12'>
       <section className='py-20 bg-black'>
@@ -54,7 +52,7 @@ export default function ArtistPageClient({ artist: artistProps }: ArtistPageClie
             >
               {artist.image && (
                 <Image
-                  src={artist.image}
+                  src={edit ? artist.image : resolveImageSrc(artist.image)}
                   alt={artist.imageAlt ?? ''}
                   fill
                   className='object-cover'

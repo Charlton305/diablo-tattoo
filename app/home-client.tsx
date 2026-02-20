@@ -18,10 +18,8 @@ export default function HomeClient({
   >
 }) {
   const { data: homepageData } = useTina(homepage)
-  const { data: artistsData } = useTina(artists)
   const homepageContent = homepageData.homepage
-
-  const artistEdges = artistsData.artistConnection.edges ?? []
+  const artistEdges = artists.data.artistConnection.edges ?? []
 
   const artistsList = artistEdges
     .flatMap(edge =>

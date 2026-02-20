@@ -145,7 +145,7 @@ export default defineConfig({
                 type: 'image',
                 name: 'src',
                 label: 'Image',
-                uploadDir: (formValues) => `artists/${formValues.slug}`,
+                uploadDir: (formValues: any) => `artists/${formValues.slug}`,
               },
               { type: 'string', name: 'alt', label: 'Alt Text' },
             ],

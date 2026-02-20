@@ -2,13 +2,22 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
+import { useTina, tinaField, useEditState } from 'tinacms/dist/react'
 import { ChevronLeft } from 'lucide-react'
-import { useTina, tinaField } from 'tinacms/dist/react'
 import ArtistGallery from '@/components/artists/ArtistGallery'
 import LinkButton from '@/components/shared/LinkButton'
 
 interface ArtistPageClientProps {
   artist: Awaited<ReturnType<typeof import('@/tina/__generated__/client').default.queries.artist>>
+}
+
+function resolveImageSrc(src: string): string {
+  if (!src) return ''
+  if (src.startsWith('https://assets.tina.io/')) {
+    const parts = src.split('/')
+    return '/' + parts.slice(4).join('/')
+  }
+  return src
 }
 
 export default function ArtistPageClient({ artist: artistProps }: ArtistPageClientProps) {
@@ -17,13 +26,15 @@ export default function ArtistPageClient({ artist: artistProps }: ArtistPageClie
 
   const buttonText = artist.isArtist ? `Book with ${artist.name}` : 'Get in touch'
 
+  const { edit } = useEditState()
+console.log(edit)
   const galleryImages = (artist.galleryImages ?? [])
     .filter((img): img is NonNullable<typeof img> => img != null)
     .map(img => ({
-      src: img.src ?? '',
+      src: edit ? img.src ?? '' : resolveImageSrc(img.src ?? ''),
       alt: img.alt ?? '',
     }))
-
+console.log(galleryImages)
   return (
     <div className='pt-12'>
       <section className='py-20 bg-black'>

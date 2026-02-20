@@ -15,7 +15,7 @@ function resolveImageSrc(src: string): string {
   if (!src) return ''
   if (src.startsWith('https://assets.tina.io/')) {
     const parts = src.split('/')
-    return '/' + parts.slice(4).join('/')
+    return '/images/' + parts.slice(4).join('/')
   }
   return src
 }
@@ -27,14 +27,14 @@ export default function ArtistPageClient({ artist: artistProps }: ArtistPageClie
   const buttonText = artist.isArtist ? `Book with ${artist.name}` : 'Get in touch'
 
   const { edit } = useEditState()
-console.log(edit)
+  console.log(edit)
   const galleryImages = (artist.galleryImages ?? [])
     .filter((img): img is NonNullable<typeof img> => img != null)
     .map(img => ({
       src: edit ? img.src ?? '' : resolveImageSrc(img.src ?? ''),
       alt: img.alt ?? '',
     }))
-console.log(galleryImages)
+  console.log(galleryImages)
   return (
     <div className='pt-12'>
       <section className='py-20 bg-black'>

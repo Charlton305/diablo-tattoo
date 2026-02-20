@@ -24,7 +24,7 @@
     },
     {
       "question": "Can I reschedule?",
-      "answer": "You are able to reschedule an appointment with enough notice. We require MORE than 72 hours to rearrange the appointment. Deposit will be lost if a request to reschedule is made after this window."
+      "answer": "You are able to reschedule an appointment with enough notice. We require ONE WEEK'S NOTICE to rearrange the appointment. Deposit will be lost if a request to reschedule is made after this window."
     },
     {
       "question": "Will I receive a copy of the tattoo I am getting?",
@@ -65,6 +65,10 @@
     {
       "question": "I'm under 18. Can I still get tattooed with parent/guardian permission?",
       "answer": "No. It is against the law to tattoo anyone under the age of 18. We will NOT budge on this. If you are under the age of 21 you will be required to present a photo ID as you sign your consent form prior to the session starting. If you do not bring in photo ID on the day of your tattoo we will not be able to tattoo you."
+    },
+    {
+      "question": "How do I get to you and where can I park?",
+      "answer": "Car and train are the easiest ways to get to the studio. There are several car parks around Rochester: Blue Boar Car Park, Rochester Riverside Multi-Storey Car Park, and Rochester Cathedral Car Park are all able to be used for long-term stays. Local rates apply. Rochester Train Station is located opposite Blue Boar Car Park and is easily accessible and useful for transport before and after long sessions."
     }
   ]
 }

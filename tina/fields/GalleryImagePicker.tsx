@@ -3,40 +3,33 @@
 
 import { useState } from 'react'
 import { createPortal } from 'react-dom'
-import { wrapFieldsWithMeta } from 'tinacms'
+import { wrapFieldsWithMeta, useCMS } from 'tinacms'
 
 const GalleryImagePicker = wrapFieldsWithMeta(({ input }) => {
+  const cms = useCMS()
   const [isOpen, setIsOpen] = useState(false)
   const [images, setImages] = useState<{ src: string; alt: string; artist: string }[]>([])
 
   const loadImages = async () => {
-    const clientId = process.env.NEXT_PUBLIC_TINA_CLIENT_ID
-    const branch = process.env.NEXT_PUBLIC_TINA_BRANCH || 'main'
+    if (!cms.api?.tina) return
 
-    const apiUrl = clientId
-      ? `https://content.tinajs.io/content/${clientId}/github/${branch}`
-      : 'http://localhost:4001/graphql'
-
-    const res = await fetch(apiUrl, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        query: `{
-        artistConnection {
-          edges {
-            node {
-              name
-              galleryImages {
-                src
-                alt
-              }
+    const data = (await cms.api.tina.request(
+      `{
+      artistConnection {
+        edges {
+          node {
+            name
+            galleryImages {
+              src
+              alt
             }
           }
         }
-      }`,
-      }),
-    })
-    const { data } = await res.json()
+      }
+    }`,
+      { variables: {} },
+    )) as any
+
     const allImages: { src: string; alt: string; artist: string }[] = []
 
     data.artistConnection.edges?.forEach((edge: any) => {

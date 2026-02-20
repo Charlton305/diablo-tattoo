@@ -10,7 +10,7 @@ export default function AboutSection({ about }: AboutSectionProps) {
   return (
     <section className='py-20 md:py-32 bg-black'>
       <div className='container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl'>
-        <div className='grid md:grid-cols-2 gap-12 md:gap-16'>
+        <div className='grid md:grid-cols-2 gap-12 lg:gap-16'>
           <div
             className='relative min-h-[500px] md:min-h-[600px] overflow-hidden'
             data-tina-field={about ? tinaField(about, 'image') : undefined}

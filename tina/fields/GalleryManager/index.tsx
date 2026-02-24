@@ -146,6 +146,7 @@ export const GalleryManager = ({ input, field, form }: any) => {
     try {
       const formData = new FormData()
       formData.append('slug', slug)
+      formData.append('field', 'galleryImages')
       formData.append('images', JSON.stringify(localImages))
 
       pendingFiles.forEach((file, path) => {

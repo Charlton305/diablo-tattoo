@@ -1,6 +1,6 @@
 import { defineConfig } from 'tinacms'
 import GalleryImagePicker from './fields/GalleryImagePicker'
-import { ImageUpload } from './fields/ImageUpload'
+import { ProfileImageUpload } from './fields/ProfileImageUpload'
 import { GalleryManager } from './fields/GalleryManager/index'
 
 export default defineConfig({
@@ -129,7 +129,12 @@ export default defineConfig({
           { type: 'string', name: 'slug', label: 'Slug', required: true },
           { type: 'boolean', name: 'isArtist', label: 'Is Artist' },
           { type: 'number', name: 'order', label: 'Display Order' },
-          { type: 'image', name: 'image', label: 'Profile Image' },
+          {
+            type: 'image',
+            name: 'image',
+            label: 'Profile Image',
+            ui: { component: ProfileImageUpload }
+          },
           { type: 'string', name: 'imageAlt', label: 'Profile Image Alt' },
           { type: 'string', name: 'bio', label: 'Bio', ui: { component: 'textarea' } },
           {

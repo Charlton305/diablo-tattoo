@@ -9,7 +9,6 @@ const GITHUB_BRANCH = 'main'
 
 const handler = {
   async fetch(request: Request, env: Env): Promise<Response> {
-    // CORS headers so the Tina admin can call this
     const corsHeaders = {
       'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Methods': 'POST, OPTIONS',
@@ -46,18 +45,15 @@ const handler = {
     try {
       const formData = await request.formData()
       const slug = formData.get('slug') as string
-      const imagesJson = formData.get('images') as string
+      const fieldName = formData.get('field') as string
 
-      if (!slug || !imagesJson) {
-        return new Response(JSON.stringify({ error: 'Missing slug or images' }), {
+      if (!slug || !fieldName) {
+        return new Response(JSON.stringify({ error: 'Missing slug or field' }), {
           status: 400,
           headers: { ...corsHeaders, 'Content-Type': 'application/json' },
         })
       }
 
-      const images: { src: string; alt: string }[] = JSON.parse(imagesJson)
-
-      // Collect all files to commit
       const filesToCommit: { path: string; content: string }[] = []
 
       // Process any new image files
@@ -72,8 +68,6 @@ const handler = {
             binary += String.fromCharCode(...chunk)
           }
           const base64 = btoa(binary)
-          // key is the full path e.g. /images/artists/ray/ray-foo.jpg
-          // GitHub API wants path without leading slash
           filesToCommit.push({
             path: `public${key}`,
             content: base64,
@@ -85,15 +79,23 @@ const handler = {
       const artistJsonPath = `content/artists/${slug}.json`
       const existingArtistJson = await getFileFromGitHub(artistJsonPath, env)
       const artistData = JSON.parse(existingArtistJson)
-      artistData.galleryImages = images
+
+      if (fieldName === 'galleryImages') {
+        const imagesJson = formData.get('images') as string
+        if (!imagesJson) throw new Error('Missing images')
+        artistData.galleryImages = JSON.parse(imagesJson)
+      } else {
+        const value = formData.get('value') as string
+        if (!value) throw new Error('Missing value')
+        artistData[fieldName] = value
+      }
 
       filesToCommit.push({
         path: artistJsonPath,
         content: btoa(unescape(encodeURIComponent(JSON.stringify(artistData, null, 2)))),
       })
 
-      // Commit everything in one go
-      await commitFilesToGitHub(filesToCommit, `Update gallery for ${slug}`, env)
+      await commitFilesToGitHub(filesToCommit, `Update ${fieldName} for ${slug}`, env)
 
       return new Response(JSON.stringify({ success: true }), {
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
@@ -119,7 +121,6 @@ async function getFileFromGitHub(path: string, env: Env): Promise<string> {
       },
     },
   )
-
   if (!res.ok) throw new Error(`Failed to fetch ${path} from GitHub: ${res.status}`)
   const data: any = await res.json()
   return atob(data.content.replace(/\n/g, ''))
@@ -130,7 +131,6 @@ async function commitFilesToGitHub(
   message: string,
   env: Env,
 ): Promise<void> {
-  // Get the current commit SHA for the branch
   const refRes = await fetch(
     `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/git/ref/heads/${GITHUB_BRANCH}`,
     {
@@ -145,7 +145,6 @@ async function commitFilesToGitHub(
   const refData: any = await refRes.json()
   const latestCommitSha = refData.object.sha
 
-  // Get the tree SHA for the latest commit
   const commitRes = await fetch(
     `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/git/commits/${latestCommitSha}`,
     {
@@ -160,7 +159,6 @@ async function commitFilesToGitHub(
   const commitData: any = await commitRes.json()
   const baseTreeSha = commitData.tree.sha
 
-  // Create blobs for each file
   const treeItems = await Promise.all(
     files.map(async file => {
       const blobRes = await fetch(
@@ -187,7 +185,6 @@ async function commitFilesToGitHub(
     }),
   )
 
-  // Create a new tree
   const treeRes = await fetch(
     `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/git/trees`,
     {
@@ -204,7 +201,6 @@ async function commitFilesToGitHub(
   if (!treeRes.ok) throw new Error(`Failed to create tree: ${treeRes.status}`)
   const treeData: any = await treeRes.json()
 
-  // Create the commit
   const newCommitRes = await fetch(
     `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/git/commits`,
     {
@@ -225,7 +221,6 @@ async function commitFilesToGitHub(
   if (!newCommitRes.ok) throw new Error(`Failed to create commit: ${newCommitRes.status}`)
   const newCommitData: any = await newCommitRes.json()
 
-  // Update the branch to point to the new commit
   const updateRefRes = await fetch(
     `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/git/refs/heads/${GITHUB_BRANCH}`,
     {
@@ -253,7 +248,6 @@ async function verifyTinaToken(token: string, clientId: string): Promise<boolean
       },
     },
   )
-  console.log('Tina token verification response status:', res.status)
   if (!res.ok) return false
   const user: any = await res.json()
   return user.verified === true

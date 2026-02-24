@@ -253,6 +253,7 @@ async function verifyTinaToken(token: string, clientId: string): Promise<boolean
       },
     },
   )
+  console.log('Tina token verification response status:', res.status)
   if (!res.ok) return false
   const user: any = await res.json()
   return user.verified === true

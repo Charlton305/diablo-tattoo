@@ -143,20 +143,6 @@ export const GalleryManager = ({ input, field, form }: any) => {
     setSaveStatus('idle')
     const slug = getArtistSlug()
 
-    console.log('=== GALLERY SAVE ===')
-    console.log('Artist slug:', slug)
-    console.log('Images array:', localImages)
-    console.log(
-      'Pending new files:',
-      Array.from(pendingFiles.entries()).map(([path, file]) => ({
-        path,
-        name: file.name,
-        size: `${(file.size / 1024).toFixed(1)}kb`,
-        type: file.type,
-      })),
-    )
-    console.log('===================')
-
     try {
       const formData = new FormData()
       formData.append('slug', slug)
@@ -166,7 +152,6 @@ export const GalleryManager = ({ input, field, form }: any) => {
         formData.append(path, file)
       })
 
-      const tinaClient = cms.api.tina as any
       const res = await fetch(
         `https://diablo-worker.leejcharlton.workers.dev?clientID=${tinaClient.clientId}`,
         {

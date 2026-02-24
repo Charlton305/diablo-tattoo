@@ -130,7 +130,7 @@ export default defineConfig({
           { type: 'boolean', name: 'isArtist', label: 'Is Artist' },
           { type: 'number', name: 'order', label: 'Display Order' },
           {
-            type: 'image',
+            type: 'string',
             name: 'image',
             label: 'Profile Image',
             ui: { component: ProfileImageUpload }

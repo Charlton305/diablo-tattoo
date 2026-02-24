@@ -11,9 +11,11 @@ export const ProfileImageUpload = ({ input, field, form }: any) => {
 
   const currentSrc =
     typeof input.value === 'string' && input.value
-      ? input.value.startsWith('/')
+      ? input.value.startsWith('http')
         ? input.value
-        : `/${input.value}`
+        : input.value.startsWith('/')
+          ? input.value
+          : `/${input.value}`
       : null
 
   const getSlug = () => form.getState().values?.slug ?? null

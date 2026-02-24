@@ -137,8 +137,8 @@ export const GalleryManager = ({ input, field, form }: any) => {
 
   const handleSaveToGithub = async () => {
     const tinaClient = cms.api.tina as any
-    const token = await tinaClient.authProvider.getToken()
-    console.log('token:', token)
+    const { id_token } = await tinaClient.authProvider.getToken()
+
     setIsSaving(true)
     setSaveStatus('idle')
     const slug = getArtistSlug()
@@ -167,11 +167,14 @@ export const GalleryManager = ({ input, field, form }: any) => {
       })
 
       const tinaClient = cms.api.tina as any
-      const res = await tinaClient.fetchWithToken(
+      const res = await fetch(
         `https://diablo-worker.leejcharlton.workers.dev?clientID=${tinaClient.clientId}`,
         {
           method: 'POST',
           body: formData,
+          headers: {
+            Authorization: `Bearer ${id_token}`,
+          },
         },
       )
 

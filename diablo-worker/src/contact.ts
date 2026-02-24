@@ -43,7 +43,7 @@ export async function handleContact(request: Request, env: Env, corsHeaders: Rec
 
   // TODO: swap onboarding@resend.dev for a verified client domain address before going live
   const FROM = 'onboarding@resend.dev'
-  const STUDIO_EMAIL = 'rayhunttattoo@gmail.com'
+  const STUDIO_EMAIL = 'leejcharlton@hotmail.com'
 
   const notificationHtml = `
     <h2>New Booking Enquiry</h2>

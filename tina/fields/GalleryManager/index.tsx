@@ -154,7 +154,7 @@ export const GalleryManager = ({ input, field, form }: any) => {
       })
 
       const res = await fetch(
-        `https://diablo-worker.leejcharlton.workers.dev?clientID=${tinaClient.clientId}`,
+        `https://diablo-worker.leejcharlton.workers.dev/gallery?clientID=${tinaClient.clientId}`,
         {
           method: 'POST',
           body: formData,

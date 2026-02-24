@@ -64,7 +64,7 @@ export const ProfileImageUpload = ({ input, field, form }: any) => {
       const { id_token } = await tinaClient.authProvider.getToken()
 
       const res = await fetch(
-        `https://diablo-worker.leejcharlton.workers.dev?clientID=${tinaClient.clientId}`,
+        `https://diablo-worker.leejcharlton.workers.dev/gallery?clientID=${tinaClient.clientId}`,
         {
           method: 'POST',
           body: formData,

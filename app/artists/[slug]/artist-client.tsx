@@ -11,10 +11,11 @@ interface ArtistPageClientProps {
   artist: Awaited<ReturnType<typeof import('@/tina/__generated__/client').default.queries.artist>>
 }
 
-function resolveImageSrc(src: string): string {
+function resolveImageSrc(src: string, editMode: boolean = false): string {
   if (!src) return ''
-  const imagesIndex = src.indexOf('/images')
-  if (imagesIndex !== -1) return src.slice(imagesIndex)
+  if (editMode) {
+    return `https://raw.githubusercontent.com/Charlton305/diablo-tattoo/main/public${src}`
+  }
   return src
 }
 
@@ -29,7 +30,7 @@ export default function ArtistPageClient({ artist: artistProps }: ArtistPageClie
   const galleryImages = (artist.galleryImages ?? [])
     .filter((img): img is NonNullable<typeof img> => img != null)
     .map(img => ({
-      src: edit ? img.src ?? '' : resolveImageSrc(img.src ?? ''),
+      src: resolveImageSrc(img.src ?? '', edit),
       alt: img.alt ?? '',
     }))
 
@@ -52,7 +53,7 @@ export default function ArtistPageClient({ artist: artistProps }: ArtistPageClie
             >
               {artist.image && (
                 <Image
-                  src={edit ? artist.image : resolveImageSrc(artist.image)}
+                  src={resolveImageSrc(artist.image ?? '', edit)}
                   alt={artist.imageAlt ?? ''}
                   fill
                   className='object-cover'

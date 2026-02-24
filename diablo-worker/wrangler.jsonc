@@ -1,0 +1,15 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "diablo-worker",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-02-24",
+  "observability": {
+    "enabled": true
+  },
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "vars": {
+    "TINA_CLIENT_ID": "5bf671fb-e931-41a7-9375-f0a4c0e85593"
+  }
+}

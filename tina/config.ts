@@ -1,7 +1,7 @@
 import { defineConfig } from 'tinacms'
 import GalleryImagePicker from './fields/GalleryImagePicker'
 import { ImageUpload } from './fields/ImageUpload'
-import { GalleryManager } from './fields/GalleryManager'
+import { GalleryManager } from './fields/GalleryManager/index'
 
 export default defineConfig({
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
@@ -138,18 +138,13 @@ export default defineConfig({
             label: 'Gallery Images',
             list: true,
             ui: {
-              itemProps: (item) => ({ label: item?.alt || 'Gallery Image' }),
+              component: GalleryManager,
             },
             fields: [
-              {
-                type: 'image',
-                name: 'src',
-                label: 'Image',
-                uploadDir: (formValues: any) => `artists/${formValues.slug}`,
-              },
+              { type: 'string', name: 'src', label: 'Image' },
               { type: 'string', name: 'alt', label: 'Alt Text' },
             ],
-          },
+          }
         ],
       },
       {

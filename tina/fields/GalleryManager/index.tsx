@@ -137,11 +137,8 @@ export const GalleryManager = ({ input, field, form }: any) => {
 
   const handleSaveToGithub = async () => {
     const tinaClient = cms.api.tina as any
-    console.log(
-      'Tina client methods:',
-      Object.getOwnPropertyNames(Object.getPrototypeOf(tinaClient)),
-    )
-    console.log('Tina client:', tinaClient)
+    const token = await tinaClient.authProvider.getToken()
+    console.log('token:', token)
     setIsSaving(true)
     setSaveStatus('idle')
     const slug = getArtistSlug()

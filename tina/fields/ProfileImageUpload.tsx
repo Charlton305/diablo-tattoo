@@ -14,8 +14,8 @@ export const ProfileImageUpload = ({ input, field, form }: any) => {
       ? input.value.startsWith('http')
         ? input.value
         : input.value.startsWith('/')
-          ? input.value
-          : `/${input.value}`
+        ? input.value
+        : `/${input.value}`
       : null
 
   const getSlug = () => form.getState().values?.slug ?? null
@@ -79,7 +79,8 @@ export const ProfileImageUpload = ({ input, field, form }: any) => {
 
       input.onChange(imagePath)
       if (previewUrl) URL.revokeObjectURL(previewUrl)
-      setPreviewUrl(null)
+      const githubUrl = `https://raw.githubusercontent.com/Charlton305/diablo-tattoo/main/public${imagePath}`
+      setPreviewUrl(githubUrl)
       setPendingFile(null)
       setSaveStatus('success')
     } catch (err) {

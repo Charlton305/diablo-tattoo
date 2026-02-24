@@ -11,9 +11,11 @@ export const ProfileImageUpload = ({ input, field, form }: any) => {
 
   const currentSrc =
     typeof input.value === 'string' && input.value
-      ? `https://raw.githubusercontent.com/Charlton305/diablo-tattoo/main/public${
-          input.value.startsWith('/') ? input.value : `/${input.value}`
-        }`
+      ? encodeURI(
+          `https://raw.githubusercontent.com/Charlton305/diablo-tattoo/main/public${
+            input.value.startsWith('/') ? input.value : `/${input.value}`
+          }`,
+        )
       : null
 
   const getSlug = () => form.getState().values?.slug ?? null
@@ -49,7 +51,8 @@ export const ProfileImageUpload = ({ input, field, form }: any) => {
     setSaveStatus('idle')
 
     const slug = getSlug()
-    const imagePath = `/images/artists/${slug}/${pendingFile.name}`
+    const safeName = pendingFile.name.replace(/\s+/g, '-').toLowerCase()
+    const imagePath = `/images/artists/${slug}/${safeName}`
 
     const formData = new FormData()
     formData.append('slug', slug)

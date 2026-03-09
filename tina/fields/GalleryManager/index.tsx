@@ -182,8 +182,11 @@ export const GalleryManager = ({ input, field, form }: any) => {
     }
   }
 
-  const imgSrc = (src: string) =>
-    previewUrls.has(src) ? previewUrls.get(src)! : src.startsWith('/') ? src : `/${src}`
+  const imgSrc = (src: string) => {
+    if (previewUrls.has(src)) return previewUrls.get(src)!
+    const path = src.startsWith('/') ? src : `/${src}`
+    return `https://raw.githubusercontent.com/Charlton305/diablo-tattoo/main/public${path}`
+  }
 
   return (
     <>

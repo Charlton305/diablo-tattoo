@@ -41,8 +41,7 @@ export async function handleContact(request: Request, env: Env, corsHeaders: Rec
     }
   }
 
-  // TODO: swap onboarding@resend.dev for a verified client domain address before going live
-  const FROM = 'onboarding@resend.dev'
+  const FROM = 'noreply@charltonwebdev.com'
   const STUDIO_EMAIL = 'leejcharlton@hotmail.com'
 
   const notificationHtml = `
@@ -56,45 +55,22 @@ export async function handleContact(request: Request, env: Env, corsHeaders: Rec
     ${attachments.length > 0 ? `<p><strong>Attachments:</strong> ${attachments.length} image(s) attached</p>` : ''}
   `
 
-  const confirmationHtml = `
-    <p>Hi ${name},</p>
-    <p>Thanks for getting in touch with Diablo Tattoo! We've received your enquiry and will get back to you as soon as possible.</p>
-    ${artist !== 'No preference' ? `<p>You requested to work with <strong>${artist}</strong>.</p>` : ''}
-    <p>In the meantime, feel free to browse our artists' work on our website.</p>
-    <p>Talk soon,<br/>The Diablo Tattoo Team</p>
-  `
-
   try {
-    const [notifyRes, confirmRes] = await Promise.all([
-      fetch('https://api.resend.com/emails', {
-        method: 'POST',
-        headers: {
-          Authorization: `Bearer ${env.RESEND_API_KEY}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          from: FROM,
-          to: [STUDIO_EMAIL],
-          reply_to: email,
-          subject: `New Booking Enquiry — ${name}`,
-          html: notificationHtml,
-          attachments: attachments.map(a => ({ filename: a.filename, content: a.content })),
-        }),
+    const notifyRes = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${env.RESEND_API_KEY}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        from: FROM,
+        to: [STUDIO_EMAIL],
+        reply_to: email,
+        subject: `New Booking Enquiry — ${name}`,
+        html: notificationHtml,
+        attachments: attachments.map(a => ({ filename: a.filename, content: a.content })),
       }),
-      fetch('https://api.resend.com/emails', {
-        method: 'POST',
-        headers: {
-          Authorization: `Bearer ${env.RESEND_API_KEY}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          from: FROM,
-          to: [email],
-          subject: 'We\'ve received your enquiry — Diablo Tattoo',
-          html: confirmationHtml,
-        }),
-      }),
-    ])
+    })
 
     if (!notifyRes.ok) {
       const err = await notifyRes.text()
@@ -103,11 +79,6 @@ export async function handleContact(request: Request, env: Env, corsHeaders: Rec
         status: 500,
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
       })
-    }
-
-    // Log but don't fail if confirmation to customer bounces
-    if (!confirmRes.ok) {
-      console.error('Resend confirmation error:', await confirmRes.text())
     }
 
     return new Response(JSON.stringify({ success: true }), {

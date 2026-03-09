@@ -130,6 +130,10 @@
     {
       "src": "/images/artists/ray/favicon.png",
       "alt": "test"
+    },
+    {
+      "src": "/images/artists/ray/opengraph-image.png",
+      "alt": "test2"
     }
   ]
 }

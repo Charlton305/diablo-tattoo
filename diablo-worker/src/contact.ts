@@ -41,8 +41,8 @@ export async function handleContact(request: Request, env: Env, corsHeaders: Rec
     }
   }
 
-  const FROM = 'noreply@charltonwebdev.com'
-  const STUDIO_EMAIL = 'leejcharlton@hotmail.com'
+  const FROM = 'noreply@diablotattoo.co.uk'
+  const STUDIO_EMAIL = 'rayhunttattoo@gmail.com'
 
   const notificationHtml = `
     <h2>New Booking Enquiry</h2>

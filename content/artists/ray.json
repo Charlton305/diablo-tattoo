@@ -134,6 +134,10 @@
     {
       "src": "/images/artists/ray/opengraph-image.png",
       "alt": "test2"
+    },
+    {
+      "src": "/images/artists/ray/background.png",
+      "alt": "test3"
     }
   ]
 }

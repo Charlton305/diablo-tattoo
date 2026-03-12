@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next'
 
-const BASE_URL = 'https://diablotattoo.co.uk'
+const BASE_URL = 'https://www.diablotattoo.co.uk'
 
 export const dynamic = "force-static"
 

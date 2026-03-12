@@ -16,7 +16,11 @@ export async function generateMetadata({
   return {
     title: artist.name,
     description: firstSentence,
+    alternates: {
+      canonical: `https://www.diablotattoo.co.uk/artists/${slug}`,
+    },
     openGraph: {
+      url: `https://www.diablotattoo.co.uk/artists/${slug}`,
       images: artist.image ? [{ url: artist.image }] : [],
     },
   }

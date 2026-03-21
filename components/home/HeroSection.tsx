@@ -8,7 +8,7 @@ interface HeroSectionProps {
 
 export default function HeroSection({ hero }: HeroSectionProps) {
   return (
-    <section className='relative h-[75vh] max-h-[480px] min-h-[340px] lg:h-screen lg:max-h-none flex items-center justify-center overflow-hidden'>
+    <section className='relative h-screen flex items-center justify-center overflow-hidden'>
       <div className='absolute inset-0'>
         {/* Kept as img tag as ive already created the responsive images */}
         {/* eslint-disable-next-line @next/next/no-img-element */}

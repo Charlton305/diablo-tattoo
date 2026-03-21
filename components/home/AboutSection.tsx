@@ -12,7 +12,7 @@ export default function AboutSection({ about }: AboutSectionProps) {
       <div className='container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl'>
         <div className='grid md:grid-cols-2 gap-12 lg:gap-16'>
           <div
-            className='relative min-h-[500px] md:min-h-[600px] overflow-hidden'
+            className='relative min-h-[500px] md:min-h-[600px] overflow-hidden order-2 md:order-1'
             data-tina-field={about ? tinaField(about, 'image') : undefined}
           >
             <Image
@@ -24,7 +24,7 @@ export default function AboutSection({ about }: AboutSectionProps) {
             />
           </div>
 
-          <div className='flex flex-col'>
+          <div className='flex flex-col order-1 md:order-2'>
             <h2
               className='text-4xl sm:text-5xl md:text-6xl mb-4'
               data-tina-field={about ? tinaField(about, 'heading') : undefined}

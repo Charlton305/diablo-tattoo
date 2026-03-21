@@ -1,6 +1,3 @@
-{
-  /* eslint-disable-next-line @next/next/no-img-element */
-}
 import Image from 'next/image'
 import { tinaField } from 'tinacms/dist/react'
 import type { HomepageHero } from '@/tina/__generated__/types'
@@ -11,8 +8,10 @@ interface HeroSectionProps {
 
 export default function HeroSection({ hero }: HeroSectionProps) {
   return (
-    <section className='relative lg:h-screen flex items-center justify-center overflow-hidden'>
+    <section className='relative h-[75vh] max-h-[480px] min-h-[340px] lg:h-screen lg:max-h-none flex items-center justify-center overflow-hidden'>
       <div className='absolute inset-0'>
+        {/* Kept as img tag as ive already created the responsive images */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src='/images/home/hero-1280.jpg'
           srcSet='/images/home/hero-480.webp 480w, /images/home/hero-768.webp 768w, /images/home/hero-1280.webp 1280w'
